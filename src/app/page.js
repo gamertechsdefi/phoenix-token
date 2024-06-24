@@ -25,7 +25,7 @@ export default function Home() {
               fontFamily: "Zen Dots",
             }}
           >
-            <h2>THE ORDINARY MAN'S TOKEN</h2>
+            <h2>THE ORDINARY MANS TOKEN</h2>
           </div>
         </section>
 
