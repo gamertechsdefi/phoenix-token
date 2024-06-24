@@ -152,7 +152,7 @@ export default function Home() {
 
             {/*Phoenix Bot */}
             <div className="bg-white bg-opacity-15  p-8  rounded-[20px] mb-4 hover:bg-opacity-25">
-              <p className="text-sm pb-4 z-100 ">
+              <p className="text-sm text-justify pb-4 z-100 ">
                 {" "}
                 Phoenix Token is bringing back the era for Community with a lot
                 of reward! $PHT is a deflationary token designed to become more
