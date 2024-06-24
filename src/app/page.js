@@ -67,7 +67,7 @@ export default function Home() {
             </div>
 
             <div className="flex md:width-[50%]">
-              <img className="align-center" src={bot2} width="300px" />
+              <Image className="align-center" src={bot2} width="300px" />
             </div>
           </div>
         </section>
