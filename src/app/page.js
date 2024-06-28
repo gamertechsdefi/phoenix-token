@@ -9,7 +9,6 @@ import Tokenomics from "./components/tokenomics";
 
 const webpfp = "/images/website_pfp.png";
 
-import "./css/dexscreener.module.css";
 
 export default function Home() {
   const AboutPopUp = {
@@ -28,7 +27,7 @@ export default function Home() {
 
       <main className="px-8 md:px-16">
         {/* Intro section */}
-        <section className="flex flex-col-reverse md:flex-row items-center h-screen md:h-full ">
+        <div className="flex flex-col-reverse md:flex-row items-center ">
           <div className="flex md:w-[50%]">
             <Image
               className="justify-center"
@@ -50,10 +49,10 @@ export default function Home() {
               THE ORDINARY MANS TOKEN
             </motion.h2>
           </div>
-        </section>
+        </div>
 
         {/* About Section */}
-        <motion.section className="mt-16 h-screen sm:h-full ">
+        <motion.div className="mt-16 ">
           <div className="flex flex-col gap-10 justify-between md:flex-row items-center">
             <div className="bg-[#ff6f00]  p-4 rounded-[25px] mb-4 md:w-[50%]">
               <h2 className="font-bold text-3xl pb-4">
@@ -99,11 +98,11 @@ export default function Home() {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-        </motion.section>
+        </motion.div>
 
         {/*Utilities section */}
-        <section>
-          <div className="mt-16 h-full md:h-screen items-center">
+        <div className="">
+          <div className="mt-16 ">
             <h1 className="text-2xl font-bold mb-4">
               PARADIGMS IN DEVELOPMENTS
             </h1>
@@ -150,10 +149,10 @@ export default function Home() {
               </button>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Tokenomics Section */}
-        <section>
+        <div>
           <div className="mt-16 h-full md:h-screen flex flex-col">
             <h1 className="text-2xl font-bold mb-4">TOKENOMICS</h1>
 
@@ -176,10 +175,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/*Community Reward section */}
-        <section>
+        <div>
           <div className="mt-16 h-full md:h-screen items-center">
             <h1 className="text-2xl font-bold mb-4" style={{ color: "orange" }}>
               COMMUNITY REWARDS MECHANISM
@@ -202,10 +201,10 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/*Community Reward section */}
-        <section>
+        <div>
           <div className="  h-full md:h-screen items-center">
             <h1 className="text-2xl font-bold mb-4">
               COMMUNITY REWARDS MECHANISM
@@ -221,9 +220,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section>
+        <div>
         <style jsx>{`
           #dexscreener-embed {
             position: relative;
@@ -248,7 +247,7 @@ export default function Home() {
             <iframe src="https://dexscreener.com/bsc/0x8a2328B2C8E6a6f56668a0e26081Efc250A8D6c0?embed=1&theme=dark&trades=0&info=0">
             </iframe>
           </div>
-        </section>
+        </div>
       </main>
     </body>
   );
