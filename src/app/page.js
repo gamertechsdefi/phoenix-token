@@ -69,7 +69,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <Image src={webpfp} width={600} height={30} />
+              {/* <Image src={webpfp} width={600} height={30} /> */}
             </div>
           </div>
         </section>
