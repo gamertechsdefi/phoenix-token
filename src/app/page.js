@@ -45,7 +45,7 @@ export default function Home() {
               }}
               className="text-center m-auto text-4xl md:text-8xl "
             >
-              MAN'S TOKEN
+              MANS TOKEN
             </h2>
           </div>
         </section>
