@@ -161,8 +161,8 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
                 whileTap={{
                   scale: 0.975,
                 }}
-                onMouseEnter={scramble}
-                onMouseLeave={stopScramble}
+                onViewportEnter={scramble}
+                onViewportLeave={stopScramble}
                 onClick={scrollClick}
                 className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-neutral-700 px-4 py-2 font-medium uppercase text-neutral-300 transition-colors hover:bg-[red] hover:border-[orange] hover:text-white"
               >
