@@ -1,9 +1,10 @@
-import { Inter, Zen_Dots, Space_Mono} from "next/font/google";
+import { Inter, Zen_Dots, Space_Mono, Work_Sans} from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceMono = Space_Mono({subsets: ["latin"], weight: "400"});
 const zenDots = Zen_Dots ({subsets: ["latin"], weight: "400"});
+const workSans = Work_Sans ({ subsets: ['latin']});
 
 export const metadata = {
   title: "Phoenix Token",
