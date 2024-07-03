@@ -76,6 +76,48 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
     document.getElementById('aboutSection').scrollIntoView({ behavior: 'smooth' });
   }
 
+  const textTARGET_TEXT = "ABOUT PHOENIX TOKEN";
+  const textCYCLES_PER_LETTER = 2;
+  const textSHUFFLE_TIME = 50;
+  
+  const textCHARS = "!@#$%^&*():{};|,.<>/?";
+  
+    const textIntervalRef = useRef(null);
+  
+    const [textH1, setTextH1] = useState(textTARGET_TEXT);
+  
+    const textScramble = () => {
+      let posTEXT = 0;
+  
+      textIntervalRef.current = setInterval(() => {
+        const textScrambled = textTARGET_TEXT.split("")
+          .map((char, index) => {
+            if (posTEXT / textCYCLES_PER_LETTER > index) {
+              return char;
+            }
+  
+            const textRandomCharIndex = Math.floor(Math.random() * textCHARS.length);
+            const textRandomChar = textCHARS[textRandomCharIndex];
+  
+            return textRandomChar;
+          })
+          .join("");
+  
+        setTextH1(textScrambled);
+        posTEXT++;
+  
+        if (posTEXT >= textTARGET_TEXT.length * textCYCLES_PER_LETTER) {
+          stopTextScramble();
+        }
+      }, textSHUFFLE_TIME);
+    };
+  
+    const stopTextScramble = () => {
+      clearInterval(textIntervalRef.current || undefined);
+  
+      setText(textTARGET_TEXT);
+    };
+
     return (
       <body>
         <header>
@@ -86,7 +128,11 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
           {/* Intro section */}
           <section className="w-full h-screen flex justify-center items-center ">
             <div className="text-center">
-              <h2
+              <motion.h2
+              initial={{y:"-100vh", opacity: 0}}
+              animate={{y:"0", opacity: 1}}
+              transition={{duration: 0.5, ease: "easeInOut"}}
+
                 id="header1"
                 style={{
                   fontFamily: "Zen Dots",
@@ -95,8 +141,11 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
                 className="text-center m-auto text-4xl md:text-8xl "
               >
                 THE ORDINARY
-              </h2>
-              <h2
+              </motion.h2>
+              <motion.h2
+              initial={{y:"100vh", opacity: 0}}
+              animate={{y:"0", opacity: 1}}
+              transition={{duration: 0.5, ease: "easeInOut"}}
                 style={{
                   fontFamily: "Zen Dots",
                   textAlign: "center",
@@ -104,7 +153,7 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
                 className="text-center m-auto text-4xl md:text-8xl pb-8 "
               >
                 MANS TOKEN
-              </h2>
+              </motion.h2>
               <motion.button
                 whileHover={{
                   scale: 1.025,
@@ -142,7 +191,33 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
           <section id="aboutSection">
             <div className="flex flex-col md:flex-row items-center">
               <div className="flex flex-col md:w-[70%]">
-                <h1 className="font-bold text-3xl pb-4">ABOUT PHOENIX TOKEN</h1>
+                <motion.h2
+                whileHover={{
+                  scale: 1.025,
+                }}
+                onViewportEnter={textScramble}
+                onMouseLeave={stopTextScramble}
+                className="group relative overflow-hidden font-bold text-4xl uppercase text-neutral-300 transition-colors hover:text-white"
+              >
+                <div className="relative z-10 flex items-center gap-2">
+                  <span>{textH1}</span>
+                </div>
+                {/* <motion.span
+                  initial={{
+                    y: "100%",
+                  }}
+                  animate={{
+                    y: "-100%",
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                    duration: 1,
+                    ease: "linear",
+                  }}
+                  className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-indigo-400/100 to-indigo-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+                /> */}
+              </motion.h2>
                 <p>
                   Phoenix Token is a cutting-edge AI-powered blockchain project
                   designed to revolutionize decentralized finance and
@@ -214,7 +289,7 @@ const CHARS = "!@#$%^&*():{};|,.<>/?";
               <div>
                 <h2>OUR PARTNERS</h2>
                 <div>
-                  
+
                 </div>
               </div>
             </div>
