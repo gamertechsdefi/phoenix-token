@@ -1,5 +1,5 @@
 
-import {motiion, MotionConfig} from "framer-motion";
+import {motion, MotionConfig} from "framer-motion";
 
 export default function MenuButton () {
     const [active, setActive] = useState(false);
