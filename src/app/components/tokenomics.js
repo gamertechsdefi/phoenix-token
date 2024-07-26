@@ -6,7 +6,7 @@ export default function Tokenomics() {
   return (
     <div>
       {/* Tokenomics Section */}
-      <section className="md:h-screen bg-white text-gray-900 pt-16 items-center px-4 my-32 py-8">
+      <section className="md:h-screen bg-white text-gray-900 pt-16 items-center px-4 md:px-8 my-32 py-8">
         <div className="flex flex-col ">
           <h1 className="font-bold text-orange-500 text-4xl">TOKENOMICS</h1>
 
