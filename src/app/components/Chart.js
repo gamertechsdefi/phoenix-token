@@ -6,7 +6,7 @@ export default function Chart() {
   return (
     <div>
       {/*Chart section */}
-      <section className="h-screen">
+      <section className="">
         <div className="items-center">
           <div>
             <div>
