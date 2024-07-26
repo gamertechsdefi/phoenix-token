@@ -1,302 +1,75 @@
-import { useState, useEffect } from 'react';
+"use client";
 
-const Tokenomics = () => {
-  const [isDesktop, setIsDesktop] = useState(true);
+import { motion } from "framer-motion";
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
+export default function Tokenomics() {
   return (
-    <div className="bg-red-800 text-white py-16 px-8">
-      <h2 className="text-3xl font-bold mb-8 text-center">TOKENOMICS</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {isDesktop ? (
-          <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-col items-center">
-            <div className="relative w-64 h-64 rounded-full border-4 border-orange-500">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold">
-                10M
+    <div>
+      {/* Tokenomics Section */}
+      <section className="md:h-screen bg-white text-gray-900 pt-16 items-center px-4 my-32 py-8">
+        <div className="flex flex-col ">
+          <h1 className="font-bold text-orange-500 text-4xl">TOKENOMICS</h1>
+
+          {/*Phoenix Bot */}
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4">
+              <p className="text-2xl">TOAL SUPPLY</p>
+              <h2 className="font-bold text-8xl">100M</h2>
+            </div>
+            <div className="text-white grid md:grid-cols-3 gap-4 m-auto items-center">
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20">
+                <p>Airdrop</p>
+                <p>2%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>CEX Listings</p>
+                <p>3%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Charity/Donations</p>
+                <p>5%</p>
+              </div>{" "}
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Team </p>
+                <p>5%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Initial Tokens Burnt</p>
+                <p>10%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Foundation</p>
+                <p>18%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Reserved Treasury</p>
+                <p>25%</p>
+              </div>
+              <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20">
+                <p>Liqudity Pool</p>
+                <p>22%</p>
               </div>
             </div>
-            <p className="text-xl font-medium mt-4">Total Supply</p>
           </div>
-        ) : (
-          <></>
-        )}
-
-        <div className="flex flex-col items-center">
-          <div className="flex items-center mt-4">
-            <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="w-6 h-6 text-white"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                />
-              </svg>
-            </div>
-            <p className="text-lg font-medium ml-4">REWARDS</p>
-          </div>
-
-          <ul className="list-none mb-4">
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Initial Burn - 10%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Airdrop - 2%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">CEX Listing - 3%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Charity - 5%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Marketing & Development - 5%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Team - 10%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Foundation - 18%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Liquidity - 22%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">Treasury - 25%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">2%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">BURN - 1%</p>
-            </li>
-
-            <li className="flex items-center mb-2">
-              <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-4 h-4 text-white"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m7 7v2m4-2v4M5 11V9M9 9l4 4M9 9l-4 4m4-4v4"
-                  />
-                </svg>
-              </div>
-              <p className="text-lg font-medium ml-4">MARKETING</p>
-            </li>
-          </ul>
         </div>
-      </div>
+
+        <div className="mt-16 bg-gray-900 bg-opacity-10  p-4  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
+          <h1 className="text-2xl font-bold mb-4 text-orange-500">
+            COMMUNITY REWARDS MECHANISM
+          </h1>
+          <p className="text-sm text-justify pb-4 z-100 ">
+            Phoenix Token is bringing back the era for Community with a lot of
+            reward! $PHT is a deflationary token designed to become more scarce
+            over time. All holders of Phoenix Token will earn more $WKC (WikiCat
+            Coin) and is automatically sent to your wallet by simply holding
+            Phoenix Token coins in your wallet. Watch the amount of WikiCat Coin
+            grow in your wallet as Phoenix Token coin holders automatically
+            receive a 1% fee from every transaction that happens on the Phoenix
+            Token network. The community receives more $WKC coins from the fees
+            generated on each transaction.
+          </p>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default Tokenomics;
+}

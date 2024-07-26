@@ -2,7 +2,7 @@ import { Inter, Zen_Dots, Space_Mono, Work_Sans} from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-const spaceMono = Space_Mono({subsets: ["latin"], weight: "400"});
+const spacemono = Space_Mono({subsets: ["latin"], weight: "400"});
 const zenDots = Zen_Dots ({subsets: ["latin"], weight: "400"});
 const workSans = Work_Sans ({ subsets: ['latin']});
 
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>{children}</body>
+      <body className={spacemono.className}>{children}</body>
     </html>
   );
 }
