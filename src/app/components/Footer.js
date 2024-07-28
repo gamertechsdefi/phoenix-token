@@ -17,7 +17,7 @@ export const Footer = () => {
           </div>
       </div>
       <div className="">
-        <h2 className="uppercase text-2xl font-bold pb-4">Utilities</h2>
+        <h2 className="uppercase text-xl md:text-2xl font-bold pb-4">Utilities</h2>
         <FlipLink href="#">phoenix bot</FlipLink>
         <FlipLink href="#">phoenix dex </FlipLink>
         <FlipLink href="#">phoenix foundation</FlipLink>
@@ -26,15 +26,15 @@ export const Footer = () => {
       </div>
 
       <div className="">
-      <h2 className="uppercase text-2xl font-bold pb-4">Follow us</h2>
+      <h2 className="uppercase text-xl md:text-2xl font-bold pb-4">Follow us</h2>
         <FlipLink href="#">Telegram</FlipLink>
         <FlipLink href="#">Twitter </FlipLink>
         <FlipLink href="#">Medium</FlipLink>
         <FlipLink href="#">Warpcaster</FlipLink>
       </div>
 
-      <div>
-      <h2 className="uppercase text-2xl font-bold pb-4">Others</h2>
+      <div className="">
+      <h2 className="uppercase text-xl md:text-2xl font-bold pb-4">Others</h2>
       <FlipLink href="#">Brand</FlipLink>
         <FlipLink href="#">PancakeSwap</FlipLink>
         <FlipLink href="#">Flooz</FlipLink>
@@ -54,7 +54,7 @@ const FlipLink = ({ children, href }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block mb-2 overflow-hidden whitespace-nowrap text-xl  uppercase"
+      className="relative block mb-2 overflow-hidden whitespace-nowrap text-sm md:text-xl  uppercase"
       style={{
         lineHeight: 0.75,
       }}
