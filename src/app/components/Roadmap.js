@@ -1,8 +1,13 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { isMobile, isDesktop } from "react-device-detect";
 
+
+
+
 const Example = () => {
+
+
   return (
     <div className="">
       <HorizontalScrollCarousel />
@@ -11,6 +16,51 @@ const Example = () => {
 };
 
 const HorizontalScrollCarousel = () => {
+
+  const textTARGET_TEXT = "ROADMAP";
+  const textCYCLES_PER_LETTER = 2;
+  const textSHUFFLE_TIME = 50;
+
+  const textCHARS = "!@#$%^&*():{};|,.<>/?";
+
+  const textIntervalRef = useRef(null);
+
+  const [textH1, setTextH1] = useState(textTARGET_TEXT);
+
+  const textScramble = () => {
+    let posTEXT = 0;
+
+    textIntervalRef.current = setInterval(() => {
+      const textScrambled = textTARGET_TEXT
+        .split("")
+        .map((char, index) => {
+          if (posTEXT / textCYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const textRandomCharIndex = Math.floor(
+            Math.random() * textCHARS.length
+          );
+          const textRandomChar = textCHARS[textRandomCharIndex];
+
+          return textRandomChar;
+        })
+        .join("");
+
+      setTextH1(textScrambled);
+      posTEXT++;
+
+      if (posTEXT >= textTARGET_TEXT.length * textCYCLES_PER_LETTER) {
+        stopTextScramble();
+      }
+    }, textSHUFFLE_TIME);
+  };
+
+  const stopTextScramble = () => {
+    clearInterval(textIntervalRef.current || undefined);
+
+    setTextH1(textTARGET_TEXT);
+  };
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -22,7 +72,9 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh]">
       <div className="pt-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
-        <h2 className="text-5xl pb-16 mx-8 text-orange-600 font-bold">ROADMAP</h2>
+        <motion.h2 
+        onViewportEnter={textScramble} onViewportLeave={stopTextScramble} 
+        className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>
         <motion.div style={{x}} className="mobile-specific flex gap-8 w-full flex-nowrap md:hidden">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;

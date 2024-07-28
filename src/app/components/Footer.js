@@ -13,7 +13,7 @@ export const Footer = () => {
             <Image src={phtlogo} alt="Phoenix logo" width={50} height={50} />
           <h2 className="font-bold text-2xl">Phoenix Token</h2>
           </div>
-          <p>Safeguarding Communities through the best AI technology and Empowering Individuals through the Phoenix nature of resilence and transformation.</p>
+          <p className="text-sm md:text-l">Safeguarding Communities through the best AI technology and Empowering Individuals through the Phoenix nature of resilence and transformation.</p>
           </div>
       </div>
       <div className="">

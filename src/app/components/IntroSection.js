@@ -55,8 +55,8 @@ export default function Intro() {
   return (
     <div className="">
       {/* Intro section */}
-      <section className="w-full h-screen flex justify-center items-center ">
-        <div className="text-center absolute">
+      <section className="flex min-h-screen justify-center items-center ">
+        <div className="px-8 text-center">
           <motion.h2
             // initial={{ y: "-100vh", opacity: 0 }}
             // animate={{ y: "0", opacity: 1 }}
@@ -67,7 +67,7 @@ export default function Intro() {
               fontFamily: "Zen Dots",
               textAlign: "center",
             }}
-            className="text-center m-auto text-4xl md:text-8xl "
+            className="text-center m-auto pb-8 text-5xl md:text-8xl "
           >
             THE ORDINARY MAN TOKEN
           </motion.h2>
@@ -103,32 +103,7 @@ export default function Intro() {
     </motion.button>
         </div>
       </section>
-      <section className="px-4" id="aboutSection">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="flex flex-col md:w-[70%]">
-            <motion.h2
-              whileHover={{
-                scale: 1.025,
-              }}
-              className="relative overflow-hidden font-bold text-4xl uppercase text-neutral-300 transition-colors hover:text-white"
-            >ABOUT PHOENIX TOKEN
-            </motion.h2>
-            <p>
-              Phoenix Token is a cutting-edge AI-powered Meme project designed
-              to revolutionize decentralized finance and cybersecurity. Our
-              mission is to provide advanced security tools, an innovative
-              decentralized exchange, and a suite of AI-driven utilities that
-              empower users in the rapidly evolving digital landscape. At the
-              core of Phoenix Token is our state-of-the-art AI technology, which
-              forms the backbone of our ecosystem. Our decentralized AI
-              infrastructure, powered by BNBChain & zkTechnology, offers elastic
-              computing capabilities that enable the development and deployment
-              of sophisticated AI models and applications
-            </p>
-          </div>
-          <div>{/* <Image src={webpfp} width={600} height={30} /> */}</div>
-        </div>
-      </section>
+      
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRef, useState } from "react";
 
 const war = "/images/war_partner.png";
 const dtg = "/images/dtg_parner.png";
@@ -11,12 +12,61 @@ const btcdragon = "/images/btcdragon_partner.png";
 const yukan = "/images/yukan_partner.png";
 
 export default function Partners() {
+
+  const textTARGET_TEXT = "OUR PARTNERS";
+  const textCYCLES_PER_LETTER = 2;
+  const textSHUFFLE_TIME = 50;
+
+  const textCHARS = "!@#$%^&*():{};|,.<>/?";
+
+  const textIntervalRef = useRef(null);
+
+  const [textH1, setTextH1] = useState(textTARGET_TEXT);
+
+  const textScramble = () => {
+    let posTEXT = 0;
+
+    textIntervalRef.current = setInterval(() => {
+      const textScrambled = textTARGET_TEXT
+        .split("")
+        .map((char, index) => {
+          if (posTEXT / textCYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const textRandomCharIndex = Math.floor(
+            Math.random() * textCHARS.length
+          );
+          const textRandomChar = textCHARS[textRandomCharIndex];
+
+          return textRandomChar;
+        })
+        .join("");
+
+      setTextH1(textScrambled);
+      posTEXT++;
+
+      if (posTEXT >= textTARGET_TEXT.length * textCYCLES_PER_LETTER) {
+        stopTextScramble();
+      }
+    }, textSHUFFLE_TIME);
+  };
+
+  const stopTextScramble = () => {
+    clearInterval(textIntervalRef.current || undefined);
+
+    setTextH1(textTARGET_TEXT);
+  };
+
   return (
     <div>
       <section className="bg-white text-gray-900 p-8 mb:p-16 md:py-16">
         <div className="flex flex-col">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-black mb-4">OUR PARTNERS</h2>
+            <motion.h2
+            onViewportEnter={textScramble}
+            onViewportLeave={stopTextScramble}
+            className="text-2xl font-bold text-[#ff6f00] mb-4">{textH1}</motion.h2>
             <p>
               In our ongoing commitment to excellence and innovation, we have
               forged strategic alliances with some of the most influential and

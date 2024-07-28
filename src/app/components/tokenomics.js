@@ -1,20 +1,70 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 export default function Tokenomics() {
+
+  const textTARGET_TEXT = "TOKENOMICS";
+  const textCYCLES_PER_LETTER = 2;
+  const textSHUFFLE_TIME = 50;
+
+  const textCHARS = "!@#$%^&*():{};|,.<>/?";
+
+  const textIntervalRef = useRef(null);
+
+  const [textH1, setTextH1] = useState(textTARGET_TEXT);
+
+  const textScramble = () => {
+    let posTEXT = 0;
+
+    textIntervalRef.current = setInterval(() => {
+      const textScrambled = textTARGET_TEXT
+        .split("")
+        .map((char, index) => {
+          if (posTEXT / textCYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const textRandomCharIndex = Math.floor(
+            Math.random() * textCHARS.length
+          );
+          const textRandomChar = textCHARS[textRandomCharIndex];
+
+          return textRandomChar;
+        })
+        .join("");
+
+      setTextH1(textScrambled);
+      posTEXT++;
+
+      if (posTEXT >= textTARGET_TEXT.length * textCYCLES_PER_LETTER) {
+        stopTextScramble();
+      }
+    }, textSHUFFLE_TIME);
+  };
+
+  const stopTextScramble = () => {
+    clearInterval(textIntervalRef.current || undefined);
+
+    setTextH1(textTARGET_TEXT);
+  };
   return (
     <div>
       {/* Tokenomics Section */}
       <section className="md:h-screen bg-white text-gray-900 pt-16 items-center px-4 md:px-8 my-32 py-8">
         <div className="flex flex-col ">
-          <h1 className="font-bold text-orange-500 text-4xl">TOKENOMICS</h1>
+          <motion.h1 
+          onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
+          className="font-bold text-[#ff6f00] text-4xl m-0 pb-16 md:pb-0">{textH1}</motion.h1>
 
           {/*Phoenix Bot */}
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4">
               <p className="text-2xl">TOAL SUPPLY</p>
-              <h2 className="font-bold text-8xl">100M</h2>
+              <motion.h2 
+              
+              className="font-bold text-8xl">100M</motion.h2>
             </div>
             <div className="text-white grid md:grid-cols-3 gap-4 m-auto items-center">
               <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20">

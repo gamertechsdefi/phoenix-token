@@ -1,14 +1,64 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
 
 export default function Utilities() {
+
+  const textTARGET_TEXT = "UTILITIES IN DEVELOPMENTS";
+  const textCYCLES_PER_LETTER = 2;
+  const textSHUFFLE_TIME = 50;
+
+  const textCHARS = "!@#$%^&*():{};|,.<>/?";
+
+  const textIntervalRef = useRef(null);
+
+  const [textH1, setTextH1] = useState(textTARGET_TEXT);
+
+  const textScramble = () => {
+    let posTEXT = 0;
+
+    textIntervalRef.current = setInterval(() => {
+      const textScrambled = textTARGET_TEXT
+        .split("")
+        .map((char, index) => {
+          if (posTEXT / textCYCLES_PER_LETTER > index) {
+            return char;
+          }
+
+          const textRandomCharIndex = Math.floor(
+            Math.random() * textCHARS.length
+          );
+          const textRandomChar = textCHARS[textRandomCharIndex];
+
+          return textRandomChar;
+        })
+        .join("");
+
+      setTextH1(textScrambled);
+      posTEXT++;
+
+      if (posTEXT >= textTARGET_TEXT.length * textCYCLES_PER_LETTER) {
+        stopTextScramble();
+      }
+    }, textSHUFFLE_TIME);
+  };
+
+  const stopTextScramble = () => {
+    clearInterval(textIntervalRef.current || undefined);
+
+    setTextH1(textTARGET_TEXT);
+  };
+
   return (
     <div>
       {/*Utilities section */}
       <motion.section className="px-4">
         <div className="mt-16 ">
-          <h1 className="text-2xl font-bold mb-4">PARADIGMS IN DEVELOPMENTS</h1>
+          <motion.h1
+          onViewportEnter={textScramble} 
+          onViewportLeave={stopTextScramble}
+          className="text-2xl text-[#ff6f00] font-bold mb-4">{textH1}</motion.h1>
 
           {/*Phoenix Bot */}
           <div className="bg-[#FF6B00] p-8  rounded-[20px] mb-4">
