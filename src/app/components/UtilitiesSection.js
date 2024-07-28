@@ -66,7 +66,6 @@ export default function Utilities() {
           <div className="bg-[white] p-8  rounded-[20px] mb-4">
             <h1 className="font-bold text-xl pb-4">Phoenix Bot</h1>
             <p className="text-sm pb-4">
-              {" "}
               Phoenix Bot stands as a robust and essential tool for anyone
               involved in the blockchain space. By leveraging advanced AI
               technologies, it ensures that the blockchain ecosystem remains
@@ -84,7 +83,6 @@ export default function Utilities() {
           <div className="bg-gray-100 p-8  rounded-[20px] mb-4">
             <h1 className="font-bold text-xl pb-4">Phoenix DEX</h1>
             <p className="text-sm pb-4">
-              {" "}
               Phoenix DEX is revolutionizing the decentralized exchange
               landscape by integrating advanced AI technologies and cross-chain
               capabilities. Experience faster, more secure, and highly flexible
@@ -101,7 +99,6 @@ export default function Utilities() {
           <div className="bg-gray-200 p-8  rounded-[20px]">
             <h1 className="font-bold text-xl pb-4">Phoenix Foundation</h1>
             <p className="pb-4 text-sm">
-              {" "}
               At Phoenix Foundation, our mission is to empower individuals by
               providing them with the resources, opportunities, and support they
               need to thrive. We are committed to making meaningful charity
