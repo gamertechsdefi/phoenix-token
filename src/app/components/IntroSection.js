@@ -62,7 +62,7 @@ export default function Intro() {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             id="header1"
             style={{
-              fontFamily: "Zen Dots",
+              fontFamily: "",
               textAlign: "center",
             }}
             className="text-center m-auto pb-8 text-5xl md:text-8xl "
