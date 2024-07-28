@@ -72,7 +72,7 @@ export default function AbourtSection() {
               to revolutionize decentralized finance and cybersecurity. Our
               mission is to provide advanced security tools, an innovative
               decentralized exchange, and a suite of AI-driven utilities that
-              empower users in the rapidly evolving digital landscape.  
+              empower users in the rapidly evolving digital landscape.
             </p>
           </div>
           <div>{/* <Image src={webpfp} width={600} height={30} /> */}</div>
@@ -87,15 +87,13 @@ export default function AbourtSection() {
               animate="visible"
               className="font-bold text-3xl pb-4"
             >
-              SAFEGUARDING COMMUNITIES
+              RENOUNCED OWNERSHIP
             </motion.h2>
             <p className="text-justify">
-              The Immortals community is one of the most active and resilient
-              groups in the crypto space. Our global network of phoenix
-              enthusiasts supports our mission of fostering transformation and
-              building a secure ecosystem. With over 10,000 Immortals across
-              various social platforms, the Immortals spread a message of
-              rebirth and endurance.
+              We have taken the bold step towards true decentralization by
+              officially renouncing ownership. This pivotal move is designed to
+              empower our community, ensuring that the project remains open,
+              transparent, and fully governed by its users.
             </p>
           </div>
 
@@ -106,14 +104,14 @@ export default function AbourtSection() {
               animate="visible"
               className="font-bold text-3xl pb-4"
             >
-              EMPOWRING INDIVIDUALS
+              LIQUDITY LOCKED
             </motion.h2>
             <p className="text-justify">
-            At the heart of our initiative is the belief that empowerment
-              comes from within, but can be catalyzed by acts of kindness and
-              support. Through our charitable donations, we aim to create a
-              ripple effect of positive change, inspiring individuals to embrace
-              their inner strength and potential.
+              Our token liqudity pool have been successfully locked, marking a
+              significant milestone in our commitment to security and
+              transparency. This strategic move is designed to enhance trust and
+              stability within our community, ensuring that our project remains
+              robust and resilient.
             </p>
           </div>
 
@@ -124,14 +122,15 @@ export default function AbourtSection() {
               animate="visible"
               className="font-bold text-3xl pb-4"
             >
-              BEYOND THE MEME
+              LOW TAXES, HIGH REWARDS
             </motion.h2>
             <p className="text-justify">
-            Memes have become a fundamental unit of cultural transmission,
-            analogous to genes in biological evolution. However, we believe
-            their potential extends far beyond humor and social commentary. Our
-            initiative aims to harness the viral nature of memes to spread
-            innovative ideas and inspire resilience.
+              We believe in creating value for our community
+              members. That's why we've implemented a modest 5% tax on
+              transactions, designed to benefit you directly through a
+              comprehensive rewards system. Our goal is to foster a thriving,
+              engaged, and prosperous community by giving back more to those who
+              believe in and support our project.
             </p>
           </div>
         </motion.div>
