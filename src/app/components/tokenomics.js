@@ -52,11 +52,11 @@ export default function Tokenomics() {
   return (
     <div>
       {/* Tokenomics Section */}
-      <section className="md:h-screen bg-white text-gray-900 pt-16 items-center px-4 md:px-8 my-32 py-8">
+      <section className="md:h-screen bg-white text-gray-900 text-center pt-16 items-center px-4 md:px-8 my-32 py-8">
         <div className="flex flex-col ">
           <motion.h1 
           onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
-          className="font-bold text-[#ff6f00] text-4xl m-0 pb-16 md:pb-0">{textH1}</motion.h1>
+          className="font-bold text-[#ff6f00] text-3xl md:text-5xl m-0 pb-16 md:pb-0">{textH1}</motion.h1>
 
           {/*Phoenix Bot */}
           <div className="flex flex-col md:flex-row">

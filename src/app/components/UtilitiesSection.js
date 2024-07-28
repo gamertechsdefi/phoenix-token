@@ -58,7 +58,7 @@ export default function Utilities() {
           <motion.h1
           onViewportEnter={textScramble} 
           onViewportLeave={stopTextScramble}
-          className="text-2xl text-[#ff6f00] font-bold mb-4">{textH1}</motion.h1>
+          className="text-3xl md:text-5xl text-[#ff6f00] font-bold mb-4">{textH1}</motion.h1>
 
           {/*Phoenix Bot */}
           <div className="bg-[#FF6B00] p-8  rounded-[20px] mb-4">

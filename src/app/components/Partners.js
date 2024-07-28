@@ -66,7 +66,7 @@ export default function Partners() {
             <motion.h2
             onViewportEnter={textScramble}
             onViewportLeave={stopTextScramble}
-            className="text-2xl font-bold text-[#ff6f00] mb-4">{textH1}</motion.h2>
+            className="text-3xl md:text-5xl font-bold text-[#ff6f00] mb-4">{textH1}</motion.h2>
             <p>
               In our ongoing commitment to excellence and innovation, we have
               forged strategic alliances with some of the most influential and

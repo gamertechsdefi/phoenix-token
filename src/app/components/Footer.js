@@ -6,7 +6,7 @@ const phtlogo = "/images/logo_blank.png";
 
 export const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-20 bg-orange-300 px-8 py-24 text-black md:items-top">
+    <div className="flex flex-col md:flex-row gap-20 bg-gradient-to-b from-orange-200 to-orange-400 px-8 py-24 text-black md:items-top">
       <div className="md:w-[40%]">
         <div className="">
         <div className="flex gap-2 pb-2 items-center">

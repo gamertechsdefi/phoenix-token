@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function AbourtSection() {
-  const textTARGET_TEXT = "ABOUT PHOENIX TOKEN";
+  const textTARGET_TEXT = "THE FIRST TRUE AI-MEME TOKEN";
   const textCYCLES_PER_LETTER = 2;
   const textSHUFFLE_TIME = 50;
 
@@ -63,7 +63,7 @@ export default function AbourtSection() {
               whileHover={{
                 scale: 1.025,
               }}
-              className="relative overflow-hidden font-bold text-4xl uppercase text-[#ff6f00] transition-colors"
+              className="relative overflow-hidden font-bold text-3xl md:text-5xl pb-4 uppercase text-[#ff6f00] transition-colors"
             >
               {textH1}{" "}
             </motion.h2>
