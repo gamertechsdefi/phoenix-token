@@ -1,6 +1,6 @@
 "use client";
 import {useState } from "react";
-import "next/image";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 const logoImage = "/images/logo_blank.png";
@@ -53,7 +53,7 @@ export default function Header() {
         className="flex mx-4 items-center md:mx-8"
       >
         <div className="my-2 flex items-center">
-          <img src={logoImage} width="50px" className="mr-2" />
+          <Image src={logoImage} width={50} height={50} className="mr-2" />
           <span className="font-bold">Phoenix</span>
         </div>
         <div className="justify-end flex flex-grow">

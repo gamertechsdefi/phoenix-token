@@ -69,7 +69,7 @@ export default function Utilities() {
               Phoenix Bot stands as a robust and essential tool for anyone
               involved in the blockchain space. By leveraging advanced AI
               technologies, it ensures that the blockchain ecosystem remains
-              secure, transparent, and reliable. Whether you're an investor,
+              secure, transparent, and reliable. Whether you are an investor,
               developer, or enthusiast, Phoenix Bot is your go-to guardian for
               navigating the complexities of the blockchain world with
               confidence.
@@ -86,7 +86,7 @@ export default function Utilities() {
               Phoenix DEX is revolutionizing the decentralized exchange
               landscape by integrating advanced AI technologies and cross-chain
               capabilities. Experience faster, more secure, and highly flexible
-              trading with Phoenix DEX. Whether you're an experienced trader or
+              trading with Phoenix DEX. Whether you are an experienced trader or
               just starting, Phoenix DEX offers the tools and features you need
               to succeed in the world of decentralized finance.
             </p>
