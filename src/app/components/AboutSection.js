@@ -126,7 +126,7 @@ export default function AbourtSection() {
             </motion.h2>
             <p className="text-justify">
               We believe in creating value for our community
-              members. That's why we've implemented a modest 5% tax on
+              members. That is why we have implemented a modest 5% tax on
               transactions, designed to benefit you directly through a
               comprehensive rewards system. Our goal is to foster a thriving,
               engaged, and prosperous community by giving back more to those who
