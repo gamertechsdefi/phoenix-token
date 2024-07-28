@@ -72,7 +72,7 @@ export default function AbourtSection() {
               to revolutionize decentralized finance and cybersecurity. Our
               mission is to provide advanced security tools, an innovative
               decentralized exchange, and a suite of AI-driven utilities that
-              empower users in the rapidly evolving digital landscape.
+              empower users in the rapidly evolving digital landscape.  
             </p>
           </div>
           <div>{/* <Image src={webpfp} width={600} height={30} /> */}</div>
