@@ -53,11 +53,11 @@ export default function Tokenomics() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gray-900 bg-opacity-10  p-4  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
-          <h1 className="text-2xl font-bold mb-4 text-orange-500">
+        <div className="mt-16 bg-orange-300  p-4  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
+          <h1 className="text-2xl font-bold mb-4 text-gray-800">
             COMMUNITY REWARDS MECHANISM
           </h1>
-          <p className="text-sm text-justify pb-4 z-100 ">
+          <p className="text-sm md:text-lg text-justify pb-4 z-100 ">
             Phoenix Token is bringing back the era for Community with a lot of
             reward! $PHT is a deflationary token designed to become more scarce
             over time. All holders of Phoenix Token will earn more $WKC (WikiCat

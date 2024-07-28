@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { isMobile, isDesktop } from "react-device-detect";
 
 const Example = () => {
   return (
@@ -15,19 +16,25 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-255%"]);
-  const x2 = useTransform(scrollYProgress, [0, 1], ["1%", "-255%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-450%"]);
+  const x_second = useTransform(scrollYProgress, [0, 1], ["1%", "-295%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex-col h-screen items-center overflow-hidden">
-        <h2 className="text-5xl pb-16 mx-8">ROADMAP</h2>
-        <motion.div style={{x}} className="flex gap-8 w-full flex-nowrap">
+      <div className="pt-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
+        <h2 className="text-5xl pb-16 mx-8 text-orange-600 font-bold">ROADMAP</h2>
+        <motion.div style={{x}} className="mobile-specific flex gap-8 w-full flex-nowrap md:hidden">
+          {cards.map((card) => {
+            return <Card card={card} key={card.id} />;
+          })}
+        </motion.div>
+        <motion.div style={{x_second}} className="desktop-specific md:flex gap-8 flex-nowrap hidden">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
         </motion.div>
       </div>
+
     </section>
   );
 };
