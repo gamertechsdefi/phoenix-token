@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import "../components/AboutSection";
 
 export default function Intro() {
   const scrollClick = () => {
@@ -96,6 +97,7 @@ export default function Intro() {
                 duration: 1,
                 ease: "linear",
               }}
+              onClick={scrollClick}
               className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-red-400/0 from-40% via-red-400/100 to-red-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
             />
           </motion.button>
