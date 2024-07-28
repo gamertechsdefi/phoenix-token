@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function Utilities() {
-  const textTARGET_TEXT = "UTILITIES IN DEVELOPMENTS";
+  const textTARGET_TEXT = "PRODUCTS IN DEVELOPMENTS";
   const textCYCLES_PER_LETTER = 2;
   const textSHUFFLE_TIME = 50;
 
@@ -52,7 +52,7 @@ export default function Utilities() {
   return (
     <div>
       {/*Utilities section */}
-      <motion.section className="text-gray-900 px-4">
+      <motion.section className="pt-16 text-gray-900 px-4" id="utilities">
         <div className="mt-16 ">
           <motion.h1
             onViewportEnter={textScramble}

@@ -52,7 +52,7 @@ export default function Tokenomics() {
   return (
     <div>
       {/* Tokenomics Section */}
-      <section className="md:h-screen bg-white text-gray-900 text-center pt-16 items-center px-4 md:px-8 my-32 py-8">
+      <section className="md:h-screen bg-white text-gray-900 text-center pt-16 items-center px-4 md:px-8 my-32 py-8" id="tokenomics">
         <div className="flex flex-col ">
           <motion.h1 
           onViewportEnter={textScramble} onViewportLeave={stopTextScramble}

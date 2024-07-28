@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function AbourtSection() {
+export default function AboutSection() {
   const textTARGET_TEXT = "THE FIRST TRUE AI-MEME TOKEN";
   const textCYCLES_PER_LETTER = 2;
   const textSHUFFLE_TIME = 50;
@@ -54,7 +54,7 @@ export default function AbourtSection() {
     <div>
       {/* About Section */}
 
-      <section className="px-4 md:px-8" id="aboutSection">
+      <section className="py-8 md:py-16 px-4 md:px-8" id="aboutSection">
         <div className="flex flex-col md:flex-row items-center">
           <div className="flex flex-col md:w-[70%]">
             <motion.h2

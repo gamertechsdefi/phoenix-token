@@ -6,7 +6,7 @@ import { motion, useAnimate, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Header from "./components/header";
 import Intro from "./components/IntroSection";
-import AbourtSection from "./components/AboutSection";
+import AboutSection from "./components/AboutSection";
 import Partners from "./components/Partners";
 import Utilities from "./components/UtilitiesSection";
 import Tokenomics from "./components/tokenomics";
@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <Header/>
       <Intro />
-      <AbourtSection />
+      <AboutSection />
       <Chart />
       <Partners />
       <Utilities />

@@ -2,6 +2,13 @@
 import {useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+
+import "../components/AboutSection";
+import "../components/Partners";
+import "../components/Roadmap";
+import "../components/tokenomics";
+import "../components/UtilitiesSection";
 
 const logoImage = "/images/logo_blank.png";
 
@@ -78,42 +85,42 @@ export default function Header() {
                 >
                   <a
                     target="blank"
-                    href="https://phoenixtoken.community"
+                    href="#aboutSection"
                     className="hover:text-gray-500 mb-1"
                   >
-                    Home
+                    About
                   </a>
                   <a
                   target="blank"
-                    href="https://t.me/PhoenixToken0"
+                    href="#partners"
                     className="hover:text-gray-500 mb-1"
                   >
-                    Telegram
+                    Partners
                   </a>
                   <a
                   target="blank"
-                    href="https://x.com/PhoenixToken0"
+                    href="#utilities"
                     className="hover:text-gray-500 mb-1"
                   >
-                    Twitter
+                    Products
                   </a>
                   <a
                   target="blank"
-                    href="https://medium.com/@phoenixtoken"
+                    href="#tokenomics"
                     className="hover:text-gray-500 mb-1"
                   >
-                    Medium
+                    Tokenomics
                   </a>
                   <a
                   target="blank"
-                    href="https://warpcast.com/phoenixtoken"
+                    href="#roadmap"
                     className="hover:text-gray-500 mb-1"
                   >
-                    Warpcaster
+                    Roadmap
                   </a>
-                  <a target="blank" href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04">
-                    <button className="bg-gray-500 text-white font-bold rounded-[5px] p-1 hover:bg-gray-100 hover:text-[red]">
-                      Buy now
+                  <a target="blank" href="https://waitlist.phoenixtoken.community">
+                    <button className="bg-orange-600 text-white rounded-[5px] p-2 hover:bg-gray-100 hover:text-[red]">
+                      Join Waitlist
                     </button>{" "}
                   </a>
                 </motion.ul>

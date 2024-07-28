@@ -70,7 +70,7 @@ const HorizontalScrollCarousel = () => {
   const x_second = useTransform(scrollYProgress, [0, 1], ["1%", "-295%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
+    <section ref={targetRef} className="relative h-[300vh]" id="roadmap">
       <div className="pt-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
         <motion.h2 
         onViewportEnter={textScramble} onViewportLeave={stopTextScramble} 
