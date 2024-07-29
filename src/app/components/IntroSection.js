@@ -48,9 +48,9 @@ export default function Intro() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-screen px-8 flex items-center justify-center">
       {/* Intro section */}
-      <section className="w-full px-8 text-center ">
+      <section className="text-center ">
         <div className={styles.customFontText}>
         <motion.h2
           // initial={{ y: "-100vh", opacity: 0 }}
@@ -104,7 +104,7 @@ export default function Intro() {
           />
         </motion.button> </a>
 
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04">
+        <a href="https://dexscreener.com/bsc/0x8a2328b2c8e6a6f56668a0e26081efc250a8d6c0">
         <motion.button
 
           whileHover={{

@@ -75,16 +75,12 @@ const HorizontalScrollCarousel = () => {
         <motion.h2 
         onViewportEnter={textScramble} onViewportLeave={stopTextScramble} 
         className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>
-        <motion.div style={{x}} className="mobile-specific flex gap-8 w-full flex-nowrap md:hidden">
+        <motion.div style={{x}} className="flex gap-8 w-full flex-nowrap">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
         </motion.div>
-        <motion.div style={{x_second}} className="desktop-specific md:flex gap-8 flex-nowrap hidden">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
-        </motion.div>
+
       </div>
 
     </section>
