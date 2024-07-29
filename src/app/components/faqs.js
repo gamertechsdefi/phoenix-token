@@ -65,9 +65,9 @@ export default function FAQs() {
           "$PHT can be purchased with BNB, USDT or other BEP20 tokens on PancakeSwap and Poocoin",
       },
       {
-        question: "Where to buy $PHT?",
+        question: "How to contribute?",
         answer:
-          "$PHT can be purchased with BNB, USDT or other BEP20 tokens on PancakeSwap and Poocoin",
+          "Tell family and friends about the Phoenix Token resilence and transformation vision.",
       },
   ];
 
