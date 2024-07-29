@@ -3,6 +3,16 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
+const supplyVariant = {
+  hidden:{
+
+  },
+  visible: {
+
+
+  }
+}
+
 export default function Tokenomics() {
 
   const textTARGET_TEXT = "TOKENOMICS";
@@ -52,20 +62,24 @@ export default function Tokenomics() {
   return (
     <div>
       {/* Tokenomics Section */}
-      <section className="md:h-screen bg-white text-gray-900 text-center pt-16 items-center px-4 md:px-8 my-32 py-8" id="tokenomics">
+      <section className="bg-white text-gray-900 items-center px-4 md:px-8 my-32 py-8" id="tokenomics">
         <div className="flex flex-col ">
           <motion.h1 
           onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
-          className="font-bold text-[#ff6f00] text-3xl md:text-5xl m-0 pb-16 md:pb-0">{textH1}</motion.h1>
+          className="text-center font-bold text-[#ff6f00] text-3xl md:text-5xl m-0 pb-16 md:pb-0">{textH1}</motion.h1>
 
           {/*Phoenix Bot */}
           <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4">
-              <p className="text-2xl">TOAL SUPPLY</p>
+            <motion.div
+            initial={{opacity:0, y:"-100vh"}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration: 1, delay:0}}
+            className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4">
+              <p className="text-2xl text-center">TOAL SUPPLY</p>
               <motion.h2 
               
-              className="font-bold text-8xl">10M</motion.h2>
-            </div>
+              className="font-bold text-8xl text-center">10M</motion.h2>
+            </motion.div>
             <div className="text-white grid md:grid-cols-3 gap-4 m-auto items-center">
               <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20">
                 <p>Airdrop</p>
