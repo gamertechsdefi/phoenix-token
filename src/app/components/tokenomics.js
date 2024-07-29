@@ -6,10 +6,10 @@ import { useRef, useState } from "react";
 
 const sectionVariants = {
   hidden: {
-    opacity: 0,
+    y: "-100vh"
   },
   inView: {
-    opacity: 1,
+    y: 0,
     transition: {
       when: "beforeChildren",
       staggerChildren: 1,
