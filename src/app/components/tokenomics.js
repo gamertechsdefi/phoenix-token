@@ -64,7 +64,7 @@ export default function Tokenomics() {
               <p className="text-2xl">TOAL SUPPLY</p>
               <motion.h2 
               
-              className="font-bold text-8xl">100M</motion.h2>
+              className="font-bold text-8xl">10M</motion.h2>
             </div>
             <div className="text-white grid md:grid-cols-3 gap-4 m-auto items-center">
               <div className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20">
