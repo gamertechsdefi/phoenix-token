@@ -81,10 +81,10 @@ export default function Tokenomics() {
         initial="hidden"
         whileInView="inView"
         viewport={{ once: true, amount: 0.3 }}
-        className="bg-white text-gray-900 items-center px-4 md:px-8 my-32 py-8"
+        className="bg-white text-gray-900 items-center px-4 md:px-16 my-32 py-8"
         id="tokenomics"
       >
-        <div className="flex flex-col ">
+        <div className="flex flex-col">
           <motion.h1
             onViewportEnter={textScramble}
             onViewportLeave={stopTextScramble}
@@ -123,7 +123,7 @@ export default function Tokenomics() {
                 variants={childVariants}
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
-                <p>Charity/Donations</p>
+                <p>Charity</p>
                 <p>5%</p>
               </motion.div>
               <motion.div

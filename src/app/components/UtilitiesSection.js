@@ -52,7 +52,7 @@ export default function Utilities() {
   return (
     <div>
       {/*Utilities section */}
-      <motion.section className="pt-16 text-gray-900 px-4" id="utilities">
+      <motion.section className="pt-16 text-gray-900 px-4 md:px-16"  id="utilities">
         <div className="mt-16 ">
           <motion.h1
             onViewportEnter={textScramble}
@@ -63,7 +63,8 @@ export default function Utilities() {
           </motion.h1>
 
           {/*Phoenix Bot */}
-          <div className="bg-[white] p-8  rounded-[20px] mb-4">
+          <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1 md:auto-rows-fr">
+          <div className="bg-[white] p-8  rounded-[20px] ">
             <h1 className="font-bold text-xl pb-4">Phoenix Bot</h1>
             <p className="text-sm pb-4">
               Phoenix Bot stands as a robust and essential tool for anyone
@@ -74,13 +75,13 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <button className="bg-gray-900 p-2 text-white rounded-[12.5px]">
+            <button className="bg-gray-900 p-4 text-white rounded-[12.5px]">
               Coming Soon
             </button>
           </div>
 
           {/*Phoenix Bot */}
-          <div className="bg-gray-100 p-8  rounded-[20px] mb-4">
+          <div className="bg-gray-100 p-8  rounded-[20px]">
             <h1 className="font-bold text-xl pb-4">Phoenix DEX</h1>
             <p className="text-sm pb-4">
               Phoenix DEX is revolutionizing the decentralized exchange
@@ -90,7 +91,7 @@ export default function Utilities() {
               just starting, Phoenix DEX offers the tools and features you need
               to succeed in the world of decentralized finance.
             </p>
-            <button className="bg-gray-900 text-white p-2 rounded-[12.5px]">
+            <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
               Coming Soon
             </button>
           </div>
@@ -104,13 +105,14 @@ export default function Utilities() {
               need to thrive. We are committed to making meaningful charity
               donations to organizations that create positive change in
               communities worldwide. By focusing on empowerment and
-              philanthropy, we aim to build a brighter, more equitable future
+              philanthropy, we aim to build a more equitable future
               for all.
             </p>
-            <button className="bg-gray-900 text-white p-2 rounded-[12.5px]">
+            <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
               Coming Soon
             </button>
           </div>
+        </div>
         </div>
       </motion.section>
     </div>

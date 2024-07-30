@@ -48,9 +48,9 @@ export default function Intro() {
   };
 
   return (
-    <div className="h-screen px-8 flex items-center justify-center">
+    <div className="h-screen flex items-center justify-center">
       {/* Intro section */}
-      <section className="text-center ">
+      <section className="text-center px-8 md:px-16 ">
         <div className={styles.customFontText}>
         <motion.h2
           // initial={{ y: "-100vh", opacity: 0 }}
@@ -63,7 +63,7 @@ export default function Intro() {
           THE ORDINARY MAN TOKEN
         </motion.h2>
         </div>
-        <p className="pb-4">
+        <p className="pb-4 md:px-32">
           We believe that everyone deserves a chance to benefit from the
           advancements in digital finance and blockchain technology. Our vision
           is to create a level playing field where every individual, regardless

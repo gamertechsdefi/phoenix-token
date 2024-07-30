@@ -71,7 +71,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh]" id="roadmap">
-      <div className="pt-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
+      <div className="pt-16 px-4 md:px-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
         <motion.h2 
         onViewportEnter={textScramble} onViewportLeave={stopTextScramble} 
         className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>

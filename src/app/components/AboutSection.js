@@ -54,7 +54,7 @@ export default function AboutSection() {
     <div>
       {/* About Section */}
 
-      <section className="py-8 md:py-16 px-4 md:px-8" id="aboutSection">
+      <section className="py-8 md:py-16 px-4 md:px-16" id="aboutSection">
         <div className="flex flex-col md:flex-row items-center">
           <div className="flex flex-col md:w-[70%]">
             <motion.h2

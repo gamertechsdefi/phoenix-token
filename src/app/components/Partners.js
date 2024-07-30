@@ -60,7 +60,7 @@ export default function Partners() {
 
   return (
     <div>
-      <section className="bg-white text-gray-900 p-8 mb:p-16 md:py-16" id="partners">
+      <section className="bg-white text-gray-900 p-8 md:p-16" id="partners">
         <div className="flex flex-col">
           <div className="mb-8">
             <motion.h2
