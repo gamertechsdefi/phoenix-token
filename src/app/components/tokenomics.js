@@ -6,10 +6,10 @@ import { useRef, useState } from "react";
 
 const sectionVariants = {
   hidden: {
-    y: "-100vh"
+    opacity: 1,
   },
   inView: {
-    y: 0,
+    opacity: 1,
     transition: {
       when: "beforeChildren",
       staggerChildren: 1,
@@ -25,6 +25,9 @@ const childVariants = {
   inView: {
     opacity: 1,
     y: 0,
+    transition: {
+      type: 'tween',
+    }
   },
 };
 
@@ -163,6 +166,31 @@ export default function Tokenomics() {
               </motion.div>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-col pt-8 items-center">
+          <motion.h1 variants={childVariants} className="text-2xl md:text-3xl pb-8 font-bold">TAX SLIPPAGE</motion.h1>
+          <motion.div variants={childVariants} className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+          <h2 className="flex flex-col text-center">
+            <span className="text-3xl">2%</span>
+            <span>REWARD</span>
+          </h2>
+
+          <h2 className="flex flex-col text-center">
+            <span className="text-3xl">1%</span>
+            <span>BURN</span>
+          </h2>
+
+          <h2 className="flex flex-col text-center">
+            <span className="text-3xl">1%</span>
+            <span>MARKETING</span>
+          </h2>
+
+          <h2 className="flex flex-col text-center">
+            <span className="text-3xl">1%</span>
+            <span>LIQUIDITY</span>
+          </h2>
+          </motion.div>
         </div>
 
         <motion.div variants={childVariants} className="mt-16 bg-orange-300  p-4  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
