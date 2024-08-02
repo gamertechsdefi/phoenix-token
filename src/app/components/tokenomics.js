@@ -204,7 +204,7 @@ export default function Tokenomics() {
             Coin) and is automatically sent to your wallet by simply holding
             Phoenix Token coins in your wallet. Watch the amount of WikiCat Coin
             grow in your wallet as Phoenix Token coin holders automatically
-            receive a 1% fee from every transaction that happens on the Phoenix
+            receive a 2% fee from every transaction that happens on the Phoenix
             Token network. The community receives more $WKC coins from the fees
             generated on each transaction.
           </p>
