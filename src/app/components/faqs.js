@@ -2,6 +2,33 @@ import React from "react";
 import { useRef, useState } from "react";
 import { motion, useTransform } from "framer-motion";
 
+const sectionVariants = {
+  hidden: {
+    opacity: 1,
+  },
+  inView: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 1,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    y: "100vh",
+  },
+  inView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'tween',
+    }
+  },
+};
+
 export default function FAQs() {
   const textTARGET_TEXT = "FAQs";
   const textCYCLES_PER_LETTER = 2;
@@ -55,6 +82,11 @@ export default function FAQs() {
       answer: "A Community Owned project created for the Ordinary Man (everyone), from the ashes of the Phoenix's myth of resilence and transformation.",
     },
     {
+      question: "Why Artifiicial Intelligence?",
+      answer:
+        "We believe that Artificial Intelligence (AI) has the transformative potential to revolutionize the development and modeling of Blockchain security. By leveraging AI technologies, we can enhance the robustness and efficiency of blockchain systems, ensuring more secure and resilient networks.  .",
+    },
+    {
       question: "Why Charity?",
       answer:
         "Much like the mythical phoenix that rises from its ashes, we believe in the power of resilience and renewal. Our charity focuses on supporting communities and individuals who face significant challenges, helping them rebuild and thrive despite the odds. We provide not only immediate relief but also long-term support to ensure that those we assist can emerge from difficult situations with renewed strength and optimism.",
@@ -73,7 +105,7 @@ export default function FAQs() {
 
   return (
     <div>
-      <section className="p-8 md:p-16 md:mx-32 flex flex-col justify-center">
+      <motion.section variants={sectionVariants} initial="hidden" whileInView="inView" className="p-8 md:p-16 md:mx-32 flex flex-col justify-center">
         <motion.h2
           onViewportEnter={textScramble}
           onViewportLeave={stopTextScramble}
@@ -83,7 +115,7 @@ export default function FAQs() {
         </motion.h2>
         <div className="text-gray-900">
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4 bg-gray-200 p-4">
+            <motion.div variants={childVariants} key={index} className="mb-4 bg-gray-200 p-4">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full text-left rounded-lg focus:outline-none"
@@ -99,10 +131,10 @@ export default function FAQs() {
               >
                 {faq.answer}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

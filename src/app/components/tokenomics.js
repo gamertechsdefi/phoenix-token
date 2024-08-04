@@ -102,7 +102,7 @@ export default function Tokenomics() {
               variants={childVariants}
               className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4"
             >
-              <p className="text-2xl text-center">TOAL SUPPLY</p>
+              <p className="text-2xl text-center">TOTAL SUPPLY</p>
               <motion.h2 className="font-bold text-8xl text-center">
                 10M
               </motion.h2>

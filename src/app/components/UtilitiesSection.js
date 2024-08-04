@@ -1,7 +1,35 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { inView } from "motion";
 import { useRef, useState } from "react";
+
+const sectionVariants = {
+  hidden: {
+    opacity: 1,
+  },
+  inView: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 1,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    y: "100vh",
+  },
+  inView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'tween',
+    }
+  },
+};
 
 export default function Utilities() {
   const textTARGET_TEXT = "PRODUCTS IN DEVELOPMENTS";
@@ -52,7 +80,7 @@ export default function Utilities() {
   return (
     <div>
       {/*Utilities section */}
-      <motion.section className="pt-16 text-gray-900 px-4 md:px-16"  id="utilities">
+      <motion.section variants={sectionVariants} initial="hidden" whileInView="inView" className="pt-16 text-gray-900 px-4 md:px-16"  id="utilities">
         <div className="mt-16 ">
           <motion.h1
             onViewportEnter={textScramble}
@@ -64,7 +92,7 @@ export default function Utilities() {
 
           {/*Phoenix Bot */}
           <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1 md:auto-rows-fr">
-          <div className="bg-[white] p-8  rounded-[20px] ">
+          <motion.div variants={childVariants}  className="bg-[white] p-8  rounded-[20px] ">
             <h1 className="font-bold text-xl pb-4">Phoenix Bot</h1>
             <p className="text-sm pb-4">
               Phoenix Bot stands as a robust and essential tool for anyone
@@ -78,10 +106,10 @@ export default function Utilities() {
             <button className="bg-gray-900 p-4 text-white rounded-[12.5px]">
               Coming Soon
             </button>
-          </div>
+          </motion.div>
 
           {/*Phoenix Bot */}
-          <div className="bg-gray-100 p-8  rounded-[20px]">
+          <motion.div variants={childVariants} className="bg-gray-100 p-8  rounded-[20px]">
             <h1 className="font-bold text-xl pb-4">Phoenix DEX</h1>
             <p className="text-sm pb-4">
               Phoenix DEX is revolutionizing the decentralized exchange
@@ -94,10 +122,10 @@ export default function Utilities() {
             <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
               Coming Soon
             </button>
-          </div>
+          </motion.div>
 
           {/*Phoenix Bot */}
-          <div className="bg-gray-200 p-8  rounded-[20px]">
+          <motion.div variants={childVariants} className="bg-gray-200 p-8  rounded-[20px]">
             <h1 className="font-bold text-xl pb-4">Phoenix Foundation</h1>
             <p className="pb-4 text-sm">
               At Phoenix Foundation, our mission is to empower individuals by
@@ -111,7 +139,7 @@ export default function Utilities() {
             <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
               Coming Soon
             </button>
-          </div>
+          </motion.div>
         </div>
         </div>
       </motion.section>
