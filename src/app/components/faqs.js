@@ -10,7 +10,7 @@ const sectionVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 1,
+      staggerChildren: 0.5,
     },
   },
 };

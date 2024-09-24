@@ -110,9 +110,9 @@ export default function Utilities() {
 
           {/*Phoenix Bot */}
           <motion.div variants={childVariants} className="bg-gray-100 p-8  rounded-[20px]">
-            <h1 className="font-bold text-xl pb-4">Phoenix DEX</h1>
+            <h1 className="font-bold text-xl pb-4">Phoenix SWAP</h1>
             <p className="text-sm pb-4">
-              Phoenix DEX is revolutionizing the decentralized exchange
+              Phoenix SWAP is revolutionizing the decentralized exchange
               landscape by integrating advanced AI technologies and cross-chain
               capabilities. Experience faster, more secure, and highly flexible
               trading with Phoenix DEX. Whether you are an experienced trader or
@@ -126,9 +126,9 @@ export default function Utilities() {
 
           {/*Phoenix Bot */}
           <motion.div variants={childVariants} className="bg-gray-200 p-8  rounded-[20px]">
-            <h1 className="font-bold text-xl pb-4">Phoenix Foundation</h1>
+            <h1 className="font-bold text-xl pb-4">The Resurgence Foundation</h1>
             <p className="pb-4 text-sm">
-              At Phoenix Foundation, our mission is to empower individuals by
+              Our mission is to empower individuals by
               providing them with the resources, opportunities, and support they
               need to thrive. We are committed to making meaningful charity
               donations to organizations that create positive change in
