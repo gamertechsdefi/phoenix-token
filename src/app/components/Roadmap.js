@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, useViewportScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { isMobile, isDesktop } from "react-device-detect";
 
@@ -66,7 +66,9 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-450%"]);
+  const isMobileScroll = useViewportScroll().isMobileScrolling;
+
+  const x = useTransform(scrollYProgress, [0, 1], isMobileScroll ? ['-200px', '0px'] : ['0px', '-500px']);
 
   return (
     <section ref={targetRef} className="relative h-[300vh]" id="roadmap">
