@@ -68,7 +68,7 @@ const HorizontalScrollCarousel = () => {
 
   const isMobileScroll = useViewportScroll().isMobileScrolling;
 
-  const x = useTransform(scrollYProgress, [0, 1], isMobileScroll ? ['1%', '-300%'] : ['1%', '-450%']);
+  const x = useTransform(scrollYProgress, [0, 1], isMobileScroll ? ['1%', '-300%'] : ['1%', '-200%']);
 
   return (
     <section ref={targetRef} className="relative h-[300vh]" id="roadmap">
