@@ -93,7 +93,7 @@ export default function Utilities() {
           {/*Phoenix Bot */}
           <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1 md:auto-rows-fr">
           <motion.div variants={childVariants}  className="bg-[white] p-8  rounded-[20px] ">
-            <h1 className="font-bold text-xl pb-4">Phoenix Bot</h1>
+            <h1 className="font-bold text-xl pb-4">PHOENIX BOT</h1>
             <p className="text-sm pb-4">
               Phoenix Bot stands as a robust and essential tool for anyone
               involved in the blockchain space. By leveraging advanced AI
@@ -110,7 +110,7 @@ export default function Utilities() {
 
           {/*Phoenix Bot */}
           <motion.div variants={childVariants} className="bg-gray-100 p-8  rounded-[20px]">
-            <h1 className="font-bold text-xl pb-4">Phoenix SWAP</h1>
+            <h1 className="font-bold text-xl pb-4">PHOENIX SWAP</h1>
             <p className="text-sm pb-4">
               Phoenix SWAP is revolutionizing the decentralized exchange
               landscape by integrating advanced AI technologies and cross-chain
@@ -126,7 +126,7 @@ export default function Utilities() {
 
           {/*Phoenix Bot */}
           <motion.div variants={childVariants} className="bg-gray-200 p-8  rounded-[20px]">
-            <h1 className="font-bold text-xl pb-4">The Resurgence Foundation</h1>
+            <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
             <p className="pb-4 text-sm">
               Our mission is to empower individuals by
               providing them with the resources, opportunities, and support they

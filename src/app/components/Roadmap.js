@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll, useViewportScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { isMobile, isDesktop } from "react-device-detect";
 
@@ -61,22 +61,13 @@ const HorizontalScrollCarousel = () => {
 
     setTextH1(textTARGET_TEXT);
   };
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const isMobileScroll = useViewportScroll().isMobileScrolling;
-
-  const x = useTransform(scrollYProgress, [0, 1], isMobileScroll ? ['1%', '-150%'] : ['1%', '-100%']);
-
   return (
-    <section ref={targetRef} className="relative h-[300vh]" id="roadmap">
-      <div className="pt-16 px-4 md:px-16 sticky top-0 flex-col h-screen items-center overflow-hidden">
-        <motion.h2 
-        onViewportEnter={textScramble} onViewportLeave={stopTextScramble} 
-        className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>
-        <motion.div style={{x}} className="flex gap-8 w-full flex-nowrap">
+    <section className="relative mb-16" id="roadmap">
+      <div className="pt-16 px-4 md:px-16 flex-col">
+        <motion.h2
+          onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
+          className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>
+        <motion.div className="flex flex-col md:flex-row text-sm gap-8">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -92,14 +83,14 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative overflow-hidden flex-shrink-0 min-w-[80%] md:min-w-[40%] lg:min-w-[30%]"
+      className=""
     >
-      <div className="shadow-md overflow-hidden p-6 m-4">
+      <div className="border-2 border-orange-500 rounded-lg p-4">
         <h2 className="text-2xl text-white font-bold mb-4">{card.title}</h2>
         {card.detail && (
-          <ul className="list-disc list-inside text-white">
+          <ul className="text-white">
             {card.detail.map((detail, index) => (
-              <li key={index}>{detail}</li>
+              <li className="pb-2" key={index}>{detail}</li>
             ))}
           </ul>
         )}
@@ -171,14 +162,16 @@ const cards = [
     title: "PHASE 5",
     detail: [
       '10,000 Asset Holders',
-'20,000 Telegram Members',
-'20,000 Twitter Followers',
-'10,000 TikTok Followers',
-'Large Influencer Marketing',
-'Phoenix Bot Launch',
-'Billboard Marketing in Asia & Europe',
-'Second Resurrection Campaign',
+      '20,000 Telegram Members',
+      '20,000 Twitter Followers',
+      '10,000 TikTok Followers',
+      'Large Influencer Marketing',
+      'Phoenix Bot Launch',
+      'Billboard Marketing in Asia & Europe',
+      'Second Resurrection Campaign',
     ],
     id: 5,
   },
 ];
+
+
