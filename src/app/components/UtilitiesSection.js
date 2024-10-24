@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import { inView } from "motion";
+import Image from "next/image";
 import { useRef, useState } from "react";
+
+const rflogo = "/images/rflogo.png";
 
 const sectionVariants = {
   hidden: {
@@ -124,9 +127,14 @@ export default function Utilities() {
             </button>
           </motion.div>
 
-          {/*Phoenix Bot */}
-          <motion.div variants={childVariants} className="bg-gray-200 p-8  rounded-[20px]">
-            <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
+          {/*Resurgence Foundation */}
+          <motion.div variants={childVariants} className="bg-gray-200 p-8 rounded-[20px]">
+            <div className="flex flex-row gap-4 justify-center">
+              <div className="w-[100px] h-[60px] bg-white border-2 border-neutral-900 rounded-lg">
+                <Image src={rflogo} width={70} height={70} alt="resurgence foundation logo" />
+              </div>
+              <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
+              </div>
             <p className="pb-4 text-sm">
               Our mission is to empower individuals by
               providing them with the resources, opportunities, and support they
