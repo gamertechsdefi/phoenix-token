@@ -130,7 +130,7 @@ export default function Utilities() {
           {/*Resurgence Foundation */}
           <motion.div variants={childVariants} className="bg-gray-200 p-8 rounded-[20px]">
             <div className="flex flex-row gap-4 justify-center">
-              <div className="w-[100px] h-[100px] bg-white border-2 border-neutral-900 rounded-lg">
+              <div className="w-[100px] h-[80px] bg-white border-2 border-neutral-900 rounded-lg">
                 <Image src={rflogo} width={70} height={70} alt="resurgence foundation logo" />
               </div>
               <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
