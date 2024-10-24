@@ -67,7 +67,7 @@ const HorizontalScrollCarousel = () => {
         <motion.h2
           onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
           className="text-5xl pb-16 mx-8 text-[#ff6f00] font-bold">{textH1}</motion.h2>
-        <motion.div className="flex flex-col md:flex-row text-sm gap-8">
+        <motion.div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
