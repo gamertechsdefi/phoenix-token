@@ -106,8 +106,8 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <button className="bg-gray-900 p-4 text-white rounded-[12.5px]">
-              Coming Soon
+            <button onClick={()=> alert("coming soon")} className="bg-gray-900 text-white p-4 rounded-[12.5px]">
+              Visit website
             </button>
           </motion.div>
 
@@ -122,8 +122,8 @@ export default function Utilities() {
               just starting, Phoenix DEX offers the tools and features you need
               to succeed in the world of decentralized finance.
             </p>
-            <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
-              Coming Soon
+            <button onClick={()=> alert("coming soon")} className="bg-gray-900 text-white p-4 rounded-[12.5px]">
+              Visit website
             </button>
           </motion.div>
 
@@ -145,7 +145,7 @@ export default function Utilities() {
               for all.
             </p>
             <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
-              Coming Soon
+              <a href="mailto:theresurgencefoundation@gmail.com">Contact us</a>
             </button>
           </motion.div>
         </div>
