@@ -52,7 +52,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="text-white sticky top-0 z-100 items-center">
+    <nav className="bg-[#250000] bg-opacity-50 text-white sticky top-0 z-100 items-center">
       <motion.div
         // variants={navVariants}
         // initial="hidden"
