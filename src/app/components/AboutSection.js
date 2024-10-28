@@ -65,7 +65,7 @@ export default function AboutSection() {
               }}
               className="relative overflow-hidden font-bold text-3xl md:text-5xl pb-4 uppercase text-[#ff6f00] transition-colors"
             >
-              {textH1}{" "}
+              {textH1}
             </motion.h2>
             <p>
               Phoenix Token is a cutting-edge AI-powered Meme project designed
@@ -80,10 +80,10 @@ export default function AboutSection() {
       </section>
       <motion.section className="py-16 px-4 md:px-8 text-gray-900 ">
         <motion.div className="grid md:grid-cols-2 gap-10">
-          <div className="bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px] mb-4">
-            <div className="flex md:items-center md:pb-4 gap-4">
+          <div className="aspect-rectangle bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px]">
+            <div className="flex flex-row items-center gap-4 pb-4">
               <svg
-                className="w-20"
+                className="w-12"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 512"
               >
@@ -94,7 +94,7 @@ export default function AboutSection() {
                 //   variants={aboutFirstPop}
                 initial="hidden"
                 animate="visible"
-                className="font-bold text-3xl pb-4"
+                className="font-bold text-xl"
               >
                 RENOUNCED OWNERSHIP
               </motion.h2>
@@ -107,14 +107,14 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="md:h-[250px] bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px] mb-4">
-            <div className="flex place-items-baseline md:items-center md:pb-4 gap-4">
+          <div className="aspect-rectangle bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px] ">
+            <div className="flex flex-row items-center pb-4 gap-4">
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fas"
                 data-icon="lock"
-                class="svg-inline--fa fa-lock fa-w-14 w-20  m-auto md:m-0 md:w-10"
+                class="w-12"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -129,7 +129,7 @@ export default function AboutSection() {
                 //   variants={aboutFirstPop}
                 initial="hidden"
                 animate="visible"
-                className="font-bold text-3xl pb-4"
+                className="font-bold text-xl"
               >
                 LIQUDITY LOCKED
               </motion.h2>
@@ -143,10 +143,10 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="md:h-[250px] bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px] mb-4">
-            <div className="flex md:items-center md:pb-4 gap-4">
+          <div className="aspect-rectangle bg-gradient-to-b from-gray-100 to-gray-400 p-4 flex flex-col justify-center md:p-6 rounded-[25px]">
+            <div className="flex flex-row items-center pb-4 gap-4">
               <svg
-                className="w-20 md:w-10"
+                className="w-12"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
@@ -157,7 +157,7 @@ export default function AboutSection() {
                 //   variants={aboutFirstPop}
                 initial="hidden"
                 animate="visible"
-                className="font-bold text-3xl pb-4"
+                className="font-bold text-xl"
               >
                 BURN MECHANISM
               </motion.h2>

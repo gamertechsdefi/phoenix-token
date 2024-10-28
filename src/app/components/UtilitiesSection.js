@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { inView } from "motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 const rflogo = "/images/rflogo.png";
 
@@ -97,7 +98,7 @@ export default function Utilities() {
           <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1 md:auto-rows-fr">
           <motion.div variants={childVariants}  className="bg-[white] p-8  rounded-[20px] ">
             <h1 className="font-bold text-xl pb-4">PHOENIX BOT</h1>
-            <p className="text-sm pb-4">
+            <p className="text-sm pb-8">
               Phoenix Bot stands as a robust and essential tool for anyone
               involved in the blockchain space. By leveraging advanced AI
               technologies, it ensures that the blockchain ecosystem remains
@@ -106,9 +107,9 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <button onClick={()=> alert("coming soon")} className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
-              Chat with our Bot
-            </button>
+            <Link href="https://www.waitlist.phoenixtoken.community" className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+              Join waitlist
+            </Link>
           </motion.div>
 
           {/*Phoenix Bot */}
