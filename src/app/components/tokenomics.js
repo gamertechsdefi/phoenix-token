@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { inView } from "motion";
 import {useRef, useState} from "react";
 
+import CopyToClipboard from "./ClipBoard";
+
 
 const sectionVariants = {
   hidden: {
@@ -100,7 +102,6 @@ export default function Tokenomics() {
           {/*Phoenix Bot */}
           <div className="flex flex-col md:flex-row">
             <motion.div
-              variants={childVariants}
               className="flex flex-col w-50 h-50 md:w-80 md:h-80 justify-center rounded-full mb-4"
             >
               <p className="text-2xl text-center">TOTAL SUPPLY</p>
@@ -108,58 +109,56 @@ export default function Tokenomics() {
                 10M
               </motion.h2>
             </motion.div>
-            <div className="text-white grid md:grid-cols-3 gap-4 m-auto items-center">
+            <div className="text-white grid md:grid-cols-2 gap-4 m-auto items-center">
               <motion.div
-                variants={childVariants}
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20"
               >
                 <p>Airdrop</p>
                 <p>2%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>CEX Listings</p>
                 <p>3%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Charity</p>
                 <p>5%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Team </p>
                 <p>5%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Initial Tokens Burnt</p>
                 <p>10%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Foundation</p>
                 <p>18%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+ 
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Reserved Treasury</p>
                 <p>25%</p>
               </motion.div>
               <motion.div
-                variants={childVariants}
+  
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row justify-between gap-20"
               >
                 <p>Liqudity Pool</p>
@@ -170,8 +169,8 @@ export default function Tokenomics() {
         </div>
 
         <div className="flex flex-col pt-8 items-center">
-          <motion.h1 variants={childVariants} className="text-2xl md:text-3xl pb-8 font-bold">TAX SLIPPAGE</motion.h1>
-          <motion.div variants={childVariants} className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+          <motion.h1  className="text-2xl md:text-3xl pb-8 font-bold">TAX SLIPPAGE</motion.h1>
+          <motion.div  className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
           <h2 className="flex flex-col">
             <span className="text-3xl">2%</span>
             <span>REWARD</span>
@@ -194,7 +193,12 @@ export default function Tokenomics() {
           </motion.div>
         </div>
 
-        <motion.div variants={childVariants} className="mt-16 bg-orange-300  p-4  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
+        <div className="py-8 px-8 text-center">
+          <h1 className="pb-4">Contract Address</h1>
+          <CopyToClipboard text="0x885c99a787BE6b41cb<br/>f964174C771A9f7ec48e04" />
+        </div>
+
+        <motion.div  className="mt-16 bg-orange-300  p-8  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
           <h1 className="text-2xl font-bold mb-4 text-gray-800">
             COMMUNITY REWARDS MECHANISM
           </h1>

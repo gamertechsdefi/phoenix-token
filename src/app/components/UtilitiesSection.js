@@ -106,8 +106,8 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <button onClick={()=> alert("coming soon")} className="bg-gray-900 text-white p-4 rounded-[12.5px]">
-              Visit website
+            <button onClick={()=> alert("coming soon")} className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+              Chat with our Bot
             </button>
           </motion.div>
 
@@ -122,16 +122,16 @@ export default function Utilities() {
               just starting, Phoenix DEX offers the tools and features you need
               to succeed in the world of decentralized finance.
             </p>
-            <button onClick={()=> alert("coming soon")} className="bg-gray-900 text-white p-4 rounded-[12.5px]">
-              Visit website
+            <button onClick={()=> alert("coming soon")} className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+              Swap now
             </button>
           </motion.div>
 
           {/*Resurgence Foundation */}
           <motion.div variants={childVariants} className="bg-gray-200 p-8 rounded-[20px]">
-            <div className="flex flex-row gap-4 justify-center pb-4">
-              <div className="w-[100px] h-[80px] bg-white border-2 border-neutral-900 rounded-lg">
-                <Image src={rflogo} width={70} height={70} alt="resurgence foundation logo" />
+            <div className="flex flex-row gap-4 justify-center pb-2">
+              <div className="relative w-[80px] h-[60px] bg-white border-2 border-neutral-900 rounded-lg">
+                <Image className="absolute" src={rflogo} layout="fill" objectFit="cover" alt="resurgence foundation logo" />
               </div>
               <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
               </div>
@@ -144,8 +144,8 @@ export default function Utilities() {
               philanthropy, we aim to build a more equitable future
               for all.
             </p>
-            <button className="bg-gray-900 text-white p-4 rounded-[12.5px]">
-              <a href="mailto:theresurgencefoundation@gmail.com">Contact us</a>
+            <button className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+              <a href="https://resurgence-foundation.vercel.app/">Learn more</a>
             </button>
           </motion.div>
         </div>
