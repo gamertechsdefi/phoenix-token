@@ -52,7 +52,7 @@ export function PictureHolder({imageholder, imagealt}){
                     onClick={handleDownload}
                     disabled={isDownloading}
                     className="bg-orange-500 hover:bg-black px-4 py-2 rounded-lg 
-                        shadow-lg backdrop-blur-sm transition-colors
+                        shadow-lg backdrop-blur-sm transition-colors text-sm
                         disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {isDownloading ? 'Downloading...' : 'Download picture'}

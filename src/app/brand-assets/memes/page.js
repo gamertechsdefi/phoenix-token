@@ -31,8 +31,8 @@ export default function BrandAssetsPage() {
     return (
         <div className="">
             <main className="flex flex-col px-8 py-8 md:px-16 md:py-16">
-                <h1 className="text-2xl pb-4">Memes</h1>
-                <p className="pb-4">Push the goal to the world through our countless set of memes</p>
+                <h1 className="text-2xl pb-4 font-bold text-orange-500">Memes</h1>
+                <p className="pb-4 text-sm">Push the goal to the world through our countless set of memes</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* <Image src={image1} width={60} height={60} /> */}
