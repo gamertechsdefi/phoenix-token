@@ -26,9 +26,9 @@ export default function BrandAssetsPage() {
                         <h1 className="text-2xl font-bold pb-8">Usage Guidelines</h1>
                         <div className="p-4 bg-orange-200 text-neutral-900 rounded-xl">
                             <ul>
-                                <li className="pb-4">Don't modify the Brand's logo colors without permission</li>
+                                <li className="pb-4">Do not modify the Brand logo colors without permission</li>
                                 <li className="pb-4">Maintain minimum clear space around logos</li>
-                                <li className="pb-4">Don't stretch or distort the logos</li>
+                                <li className="pb-4">Do not stretch or distort the logos</li>
                                 <li className="pb-4">Use approved color combinations only</li>
                                 <li className="">When in doubt, ask the Meme Council</li>
                             </ul>
