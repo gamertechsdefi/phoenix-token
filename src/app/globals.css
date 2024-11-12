@@ -20,3 +20,10 @@ body {
   background-color: #250000;
   color: white;
 }
+
+@font-face{
+  font-family: "ZenDots";
+  src: url("/public/fonts/ZenDots-Regular.ttf") format('trutype');
+  font-weight: normal;
+  font-style: normal;
+}
