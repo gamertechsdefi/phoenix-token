@@ -33,6 +33,7 @@ export const Footer = () => {
         <h2 className="uppercase text-lg md:text-xl font-bold pb-4">
           Follow us
         </h2>
+        <FlipLink href="/brand-assets">Brand Assets</FlipLink>
         <FlipLink href="https://t.me/PhoenixToken0">Telegram</FlipLink>
         <FlipLink href="https://x.com/PhoenixToken0">Twitter </FlipLink>
         <FlipLink href="https://medium.com/@phoenixtoken">Medium</FlipLink>
