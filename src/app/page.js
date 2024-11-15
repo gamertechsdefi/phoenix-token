@@ -14,6 +14,7 @@ import Roadmap from "./components/Roadmap";
 import Chart from "./components/Chart";
 import { Footer } from "./components/Footer";
 import FAQs from "./components/faqs";
+import BrandAsset from "./components/BrandAsset";
 
 export default function Home() {
   
@@ -27,6 +28,7 @@ export default function Home() {
       <Utilities />
       <Tokenomics />
       <Roadmap />
+      <BrandAsset />
       <FAQs />
       <Footer />
 

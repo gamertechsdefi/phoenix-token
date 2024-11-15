@@ -42,7 +42,7 @@ export const Footer = () => {
 
       <div className="">
         <h2 className="uppercase text-lg md:text-xl font-bold pb-4">Others</h2>
-        <FlipLink href="#">Brand</FlipLink>
+        <FlipLink href="/brand-assets">Brand</FlipLink>
         <FlipLink href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04">
           swap pht
         </FlipLink>
