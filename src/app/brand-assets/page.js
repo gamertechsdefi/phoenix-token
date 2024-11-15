@@ -12,7 +12,7 @@ export default function BrandAssetsPage() {
             <main className="p-8 md:p-16 flex flex-col justify-center">
                 <h1 className="text-2xl text-orange-500 font-bold ">PHOENIX TOKEN BRAND ASSETS</h1>
                 <p className="pb-8 text-sm">Everything you need to spread the meme magic responsibly </p>
-                <div className="flex flex-col md:flex-row gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <Link className="aspect-video  bg-orange-100 text-neutral-700  rounded-2xl flex items-center justify-center"
                         href="/brand-assets/logo-packs">Logo</Link>
                     <Link className="aspect-video  bg-orange-200 text-neutral-700 rounded-2xl flex items-center justify-center"
