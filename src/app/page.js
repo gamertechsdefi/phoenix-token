@@ -15,6 +15,7 @@ import Chart from "./components/Chart";
 import { Footer } from "./components/Footer";
 import FAQs from "./components/faqs";
 import BrandAsset from "./components/BrandAsset";
+import AuditPage from "./components/Audit";
 
 export default function Home() {
   
@@ -27,6 +28,7 @@ export default function Home() {
       <Partners />
       <Utilities />
       <Tokenomics />
+      <AuditPage />
       <Roadmap />
       <BrandAsset />
       <FAQs />
