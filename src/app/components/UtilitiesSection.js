@@ -84,8 +84,9 @@ export default function Utilities() {
   return (
     <div>
       {/*Utilities section */}
-      <motion.section variants={sectionVariants} initial="hidden" whileInView="inView" className="pt-16 text-gray-900 px-4 md:px-16"  id="utilities">
-        <div className="mt-16 ">
+      <motion.section variants={sectionVariants} initial="hidden" whileInView="inView" 
+      className="py-16 text-neutral-900 bg-gradient-to-b from-neutral-100 to-neutral-300 px-4 md:px-16"  id="utilities">
+        <div className="">
           <motion.h1
             onViewportEnter={textScramble}
             onViewportLeave={stopTextScramble}
@@ -107,7 +108,7 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <Link href="https://www.waitlist.phoenixtoken.community" className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+            <Link href="https://www.waitlist.phoenixtoken.community" className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
               Join waitlist
             </Link>
           </motion.div>
@@ -123,7 +124,7 @@ export default function Utilities() {
               just starting, Phoenix DEX offers the tools and features you need
               to succeed in the world of decentralized finance.
             </p>
-            <button onClick={()=> alert("coming soon")} className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+            <button onClick={()=> alert("coming soon")} className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
               Swap now
             </button>
           </motion.div>
@@ -145,7 +146,7 @@ export default function Utilities() {
               philanthropy, we aim to build a more equitable future
               for all.
             </p>
-            <button className="font-bold bg-gray-900 text-white p-4 rounded-[12.5px]">
+            <button className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
               <a href="https://resurgence-foundation.vercel.app/">Learn more</a>
             </button>
           </motion.div>

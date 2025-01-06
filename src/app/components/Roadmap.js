@@ -62,8 +62,8 @@ const HorizontalScrollCarousel = () => {
     setTextH1(textTARGET_TEXT);
   };
   return (
-    <section className="relative mb-16" id="roadmap">
-      <div className="pt-16 px-4 md:px-16 flex-col">
+    <section className="bg-[#120404] py-16 relative px-4" id="roadmap">
+      <div className="px-4 md:px-16 flex-col">
         <motion.h2
           onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
           className="text-5xl pb-16 text-[#ff6f00] font-bold">{textH1}</motion.h2>

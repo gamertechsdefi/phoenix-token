@@ -87,7 +87,7 @@ export default function Tokenomics() {
         initial="hidden"
         whileInView="inView"
         viewport={{ once: true, amount: 0.3 }}
-        className="bg-white text-gray-900 items-center px-4 md:px-16 my-32 py-8"
+        className="items-center px-4 md:px-16 py-8 md:py-16"
         id="tokenomics"
       >
         <div className="flex flex-col">
@@ -109,7 +109,7 @@ export default function Tokenomics() {
                 10M
               </motion.h2>
             </motion.div>
-            <div className="text-white grid md:grid-cols-2 gap-4 m-auto items-center">
+            <div className="text-white grid md:grid-cols-2 gap-4 mx-4 md:m-auto items-center">
               <motion.div
                 className="bg-neutral-800 rounded-[25px] p-4 flex flex-row  justify-between gap-20"
               >
@@ -170,7 +170,7 @@ export default function Tokenomics() {
 
         <div className="flex flex-col pt-8 items-center">
           <motion.h1  className="text-2xl md:text-3xl pb-8 font-bold">TAX SLIPPAGE</motion.h1>
-          <motion.div  className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+          <motion.div  className="grid grid-cols-2 md:grid-cols-5 gap-x-16 gap-y-8 md:gap-16">
           <h2 className="flex flex-col">
             <span className="text-3xl">2%</span>
             <span>REWARD</span>
@@ -190,30 +190,18 @@ export default function Tokenomics() {
             <span className="text-3xl">1%</span>
             <span>LIQUIDITY</span>
           </h2>
+
+          <h2 className="flex flex-col">
+            <span className="text-3xl">$WKC</span>
+            <span>REWARD TOKEN</span>
+          </h2>
           </motion.div>
         </div>
 
-        <div className="py-8 px-8 text-center">
+        <div className="px-4 py-2 my-8 rounded-lg bg-white text-neutral-900 text-center">
           <h1 className="pb-4">Contract Address</h1>
-          <CopyToClipboard text="0x885c99a787BE6b41cb<br/>f964174C771A9f7ec48e04" />
+          <CopyToClipboard text="0x885c99a787BE6b41cbf964174C771A9f7ec48e04" />
         </div>
-
-        <motion.div  className="mt-16 bg-orange-300  p-8  rounded-[20px] mb-4 hover:bg-gray-200 hover:bg-opacity-25">
-          <h1 className="text-2xl font-bold mb-4 text-gray-800">
-            COMMUNITY REWARDS MECHANISM
-          </h1>
-          <p className="text-sm md:text-lg text-justify pb-4 z-100 ">
-            Phoenix Token is bringing back the era for Community with a lot of
-            reward! $PHT is a deflationary token designed to become more scarce
-            over time. All holders of Phoenix Token will earn more $WKC (WikiCat
-            Coin) and is automatically sent to your wallet by simply holding
-            Phoenix Token coins in your wallet. Watch the amount of WikiCat Coin
-            grow in your wallet as Phoenix Token coin holders automatically
-            receive a 2% fee from every transaction that happens on the Phoenix
-            Token network. The community receives more $WKC coins from the fees
-            generated on each transaction.
-          </p>
-        </motion.div>
       </motion.section>
     </div>
   );

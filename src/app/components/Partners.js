@@ -77,12 +77,12 @@ export default function Partners() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 justify-center ">
-              <Image className="hover:bg-gray-100" src={smcdao} alt="DTG token" width={200} height={200} />
-              <Image src={wkc} alt="DTG token" width={200} height={200} />
-              <Image src={dtg} alt="DTG token" width={200} height={200} />
-              <Image src={war} alt="DTG token" width={200} height={200} />
-              <Image src={btcdragon} alt="DTG token" width={200} height={200} />
-              <Image src={yukan} alt="DTG token" width={200} height={200} />
+              <Image src={smcdao} alt="smcdao" width={200} height={200} />
+              <Image src={wkc} alt="wikicat coin" width={200} height={200} />
+              <Image src={dtg} alt="defi tiger token" width={200} height={200} />
+              <Image src={war} alt="water rabbit token" width={200} height={200} />
+              <Image src={btcdragon} alt="btcdragon" width={200} height={200} />
+              <Image src={yukan} alt="yukan token" width={200} height={200} />
           </div>
         </div>
       </section>

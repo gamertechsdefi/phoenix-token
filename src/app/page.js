@@ -16,6 +16,7 @@ import { Footer } from "./components/Footer";
 import FAQs from "./components/faqs";
 import BrandAsset from "./components/BrandAsset";
 import AuditPage from "./components/Audit";
+import BuyToken from "./components/Buynow";
 
 export default function Home() {
   
@@ -24,13 +25,13 @@ export default function Home() {
       <Header/>
       <Intro />
       <AboutSection />
-      <Chart />
       <Partners />
+      <BuyToken />
       <Utilities />
       <Tokenomics />
-      <AuditPage />
       <Roadmap />
       <BrandAsset />
+      <AuditPage />
       <FAQs />
       <Footer />
 

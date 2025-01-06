@@ -56,8 +56,8 @@ export default function AboutSection() {
     <div>
       {/* About Section */}
 
-      <section className="" id="aboutSection">
-        <div className="px-8 py-16 md:px-16 flex flex-col md:flex-row items-center">
+      <section className="py-16" id="aboutSection">
+        <div className="px-8 md:px-16 flex flex-col md:flex-row items-center">
           <div className="flex flex-col md:w-[70%]">
             <motion.h2
               onViewportEnter={textScramble}
@@ -69,18 +69,11 @@ export default function AboutSection() {
             >
               {textH1}
             </motion.h2>
-            <p>
-              Phoenix Token is a cutting-edge AI-powered Meme project designed
-              to revolutionize decentralized finance and cybersecurity. Our
-              mission is to provide advanced security tools, an innovative
-              decentralized exchange, and a suite of AI-driven utilities that
-              empower users in the rapidly evolving digital landscape.
-            </p>
           </div>
           <div>{/* <Image src={webpfp} width={600} height={30} /> */}</div>
         </div>
 
-        <div className="px-8 py-16 md:px-16">
+        <div className="px-8 md:px-16">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="p-4 bg-[#f9f9f9] text-neutral-900 rounded-xl">
               <Image src="/images/burn-pht.jpg" width={400} height={400} alt="beng tax" className="border-2 border-[#AD2515] rounded-xl mb-4" />
