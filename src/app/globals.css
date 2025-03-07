@@ -27,3 +27,9 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+.header-with-dot::before {
+  content: "• ";
+  color: #ff6f00; /* Change this color to your preferred dot color */
+  font-weight: bold;
+}

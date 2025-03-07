@@ -52,16 +52,16 @@ export default function Intro() {
       {/* Intro section */}
       <section className="text-center px-8 md:px-16 ">
         <div className={styles.customFontText}>
-        <motion.h2
-          // initial={{ y: "-100vh", opacity: 0 }}
-          // animate={{ y: "0", opacity: 1 }}
-          // whileInView={scrollEffects}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          id="header1"
-          className="pb-8 text-5xl md:text-8xl "
-        >
-          THE ORDINARY MAN TOKEN
-        </motion.h2>
+          <motion.h2
+            // initial={{ y: "-100vh", opacity: 0 }}
+            // animate={{ y: "0", opacity: 1 }}
+            // whileInView={scrollEffects}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            id="header1"
+            className="pb-8 text-5xl md:text-8xl "
+          >
+            THE ORDINARY MAN TOKEN
+          </motion.h2>
         </div>
         <p className="pb-4 md:px-32">
           We believe that everyone deserves a chance to benefit from the
@@ -71,71 +71,66 @@ export default function Intro() {
           the growth of the digital economy.
         </p>
         <div className="flex justify-center gap-8">
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04">
-        <motion.button
+          <a href="https://pancakeswap.finance/swap?outputCurrency=0x885c99a787BE6b41cbf964174C771A9f7ec48e04">
+            <motion.button
 
-          whileHover={{
-            scale: 1.025,
-          }}
-          whileTap={{
-            scale: 0.975,
-          }}
-          onMouseEnter={scramble}
-          onMouseLeave={stopScramble}
-          className="group relative overflow-hidden rounded-lg border-[1px] border-orange-500 bg-orange-700 px-4 py-2 font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-orange-300"
-        >
-          <div className="relative z-10 flex items-center gap-2">
-            <span>{text}</span>
-          </div>
-          <motion.span
-            initial={{
-              y: "100%",
-            }}
-            animate={{
-              y: "-100%",
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 1,
-              ease: "linear",
-            }}
-            className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-red-400/0 from-40% via-red-400/100 to-red-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
-          />
-        </motion.button> </a>
+              whileHover={{
+                scale: 1.025,
+              }}
+              whileTap={{
+                scale: 0.975,
+              }}
+              onMouseEnter={scramble}
+              onMouseLeave={stopScramble}
+              className="group relative overflow-hidden rounded-lg border-[1px] border-orange-500 bg-orange-700 px-4 py-2 font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-orange-300"
+            >
+              <div className="relative z-10 flex items-center gap-2">
+                <span>{text}</span>
+              </div>
+              <motion.span
+                initial={{
+                  y: "100%",
+                }}
+                animate={{
+                  y: "-100%",
+                }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 1,
+                  ease: "linear",
+                }}
+                className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-red-400/0 from-40% via-red-400/100 to-red-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+              />
+            </motion.button> </a>
 
-        <a href="https://dexscreener.com/bsc/0x8a2328b2c8e6a6f56668a0e26081efc250a8d6c0">
-        <motion.button
+          <a
+            href="/assets/whitepaper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <motion.button
+              whileHover={{ scale: 1.025 }}
+              whileTap={{ scale: 0.975 }}
+              className="group relative overflow-hidden rounded-lg border-[1px] border-gray-500 bg-gray-200 px-4 py-2 font-mono font-medium uppercase text-gray-900 transition-colors hover:text-gray-200 hover:bg-gray-900"
+            >
+              <div className="relative z-10 flex items-center gap-2">
+                <span>Check Whitepaper</span>
+              </div>
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: "-100%" }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  duration: 1,
+                  ease: "linear",
+                }}
+                className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-red-400/0 from-40% via-gray-400/100 to-gray-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+              />
+            </motion.button>
+          </a>
 
-          whileHover={{
-            scale: 1.025,
-          }}
-          whileTap={{
-            scale: 0.975,
-          }}
-          onMouseEnter={scramble}
-          onMouseLeave={stopScramble}
-          className="group relative overflow-hidden rounded-lg border-[1px] border-gray-500 bg-gray-200 px-4 py-2 font-mono font-medium uppercase text-gray-900 transition-colors hover:text-gray-200 hover:bg-gray-900"
-        >
-          <div className="relative z-10 flex items-center gap-2">
-            <span>Chart</span>
-          </div>
-          <motion.span
-            initial={{
-              y: "100%",
-            }}
-            animate={{
-              y: "-100%",
-            }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "mirror",
-              duration: 1,
-              ease: "linear",
-            }}
-            className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-red-400/0 from-40% via-gray-400/100 to-gray-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
-          />
-        </motion.button> </a>
         </div>
       </section>
     </div>

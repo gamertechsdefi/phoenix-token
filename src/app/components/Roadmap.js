@@ -2,12 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { isMobile, isDesktop } from "react-device-detect";
 
-
-
-
 const Example = () => {
-
-
   return (
     <div className="">
       <HorizontalScrollCarousel />
@@ -16,7 +11,6 @@ const Example = () => {
 };
 
 const HorizontalScrollCarousel = () => {
-
   const textTARGET_TEXT = "ROADMAP";
   const textCYCLES_PER_LETTER = 2;
   const textSHUFFLE_TIME = 50;
@@ -61,98 +55,87 @@ const HorizontalScrollCarousel = () => {
 
     setTextH1(textTARGET_TEXT);
   };
+
   return (
     <section className="bg-[#120404] py-16 relative px-4" id="roadmap">
       <div className="px-4 md:px-16 flex-col">
         <motion.h2
-          onViewportEnter={textScramble} onViewportLeave={stopTextScramble}
-          className="text-5xl pb-16 text-[#ff6f00] font-bold">{textH1}</motion.h2>
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
+          onViewportEnter={textScramble}
+          onViewportLeave={stopTextScramble}
+          className="text-5xl pb-16 text-[#ff6f00] font-bold"
+        >
+          {textH1}
+        </motion.h2>
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {roadmapData.map((phase, index) => (
+            <Card key={index} quarter={phase.quarter} items={phase.items} />
+          ))}
         </motion.div>
-
       </div>
-
     </section>
   );
 };
 
-const Card = ({ card }) => {
-  return (
-    <div key={card.id} className="border-2 border-orange-500 bg-neutral-800 bg-opacity-50 rounded-lg p-8">
-      <h2 className="text-2xl text-white font-bold mb-4">{card.title}</h2>
-      {card.detail && (
-        <ul className="text-white">
-          {card.detail.map((detail, index) => (
-            <li className="pb-2" key={index}>{detail}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-};
 
 export default Example;
 
-const cards = [
+const roadmapData = [
   {
-    title: "Q4 2023",
-    detail: [
-      "Phoenix Token launch formation",
-      "Phoenix Token website launch",
-      "2,000 Followers on X and Telegram",
-      "Marketing Campaigns for $PHT",
-      "Partnership",
+    quarter: "Q1 2025",
+    items: [
+      {
+        title: "Token Tracker v1 Release",
+        description: "Launch the first version of the Token Tracker for enhanced transparency and analytics.",
+      },
+      {
+        title: "Strategic Partnerships",
+        description: "Establish key partnerships to strengthen the ecosystem and drive adoption.",
+      },
     ],
-    id: 1,
   },
   {
-    title: "Q1 2024",
-    detail: [
-      "Contract audit",
-      "1,000 $PHT Holders",
-      "4,000 Followers on X & Telegram",
-      "Partnerships and Collaborations",
-      "Airdrop for Affected Holders",
+    quarter: "Q2 2025",
+    items: [
+      { title: "Token Tracker v2 Release", description: "Upgrade the Token Tracker with new features and improved user experience." },
+      { title: "Agent Pre-Version Release", description: "Introduce the early version of the AI agent for initial testing and feedback." },
+      { title: "Charity Donation", description: "Conduct the first charity donation initiative to support community-driven causes." },
+      { title: "First Tech Event", description: "Organize a technology-focused event to showcase innovations and connect with industry experts." },
+      { title: "Partnership Expansion", description: "Continue building partnerships to enhance the platform’s reach." },
+      { title: "Waitlist Upgrade & Release", description: "Improve the waitlist system and launch it to onboard more users efficiently." },
     ],
-    id: 2,
   },
   {
-    title: "Q2 2024",
-    detail: [
-      "YouTube Marketing and Onboarding Campaigns",
-      "Tier1 Influencers Marketing Campaign",
-      "Sponsorship & Community Partnerships",
-      "2,000 $PHT Holders",
-      "5,000 Followers on X and Telegram",
+    quarter: "Q3 2025",
+    items: [
+      { title: "Agent v1 Release", description: "Launch the full version of the AI-powered agent with advanced functionalities." },
+      { title: "DEX Pre-Version Release", description: "Introduce the decentralized exchange (DEX) in its preliminary phase." },
+      { title: "Charity Donation", description: "Execute another round of charity donations to further the project's social impact." },
+      { title: "DEX Testnet", description: "Deploy the DEX testnet for community testing and feedback." },
     ],
-    id: 3,
   },
   {
-    title: "Q3 2024",
-    detail: [
-      "Expansion of Charity Organization",
-      "Mini App Game Ideation",
-      "Meme Campaign",
-      "Reddit & Medium Marketing",
-      "Thread Campaign",
+    quarter: "Q4 2025",
+    items: [
+      { title: "Agent v2 Release", description: "Enhance the AI agent with additional capabilities and refinements." },
+      { title: "DEX Mainnet Launch", description: "Officially deploy the decentralized exchange on the mainnet." },
+      { title: "Charity Donation", description: "Continue supporting charitable initiatives through strategic donations." },
+      { title: "Agent API Release", description: "Make the AI agent API available for developers, communities, and projects to integrate." },
+      { title: "New Roadmap Release", description: "Publish the next phase of the project’s roadmap for 2026 and beyond." },
     ],
-    id: 4,
-  },
-  {
-    title: "Q4 2024",
-    detail: [
-      "Mini App Game Launch",
-      "$PHT CG & CMC Listings",
-      "10,000 $PHT Holders",
-      "Further Research and Development",
-      "50,000 $PHT Transactions",
-      "Business Plans Sponsoring Campaign",
-    ],
-    id: 5,
   },
 ];
 
+const Card = ({ quarter, items }) => {
+  return (
+    <div className="flex flex-col bg-neutral-900 bg-opacity-60 border-2 border-orange-500 rounded-lg p-8">
+      <h1 className="font-bold text-3xl">{quarter}</h1>
+      {items.map((item, index) => (
+        <div key={index} className="flex flex-col pb-2">
+          <span className="font-semibold">{item.title}</span>
+          <span>{item.description}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 

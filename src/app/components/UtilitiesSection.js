@@ -98,9 +98,9 @@ export default function Utilities() {
           {/*Phoenix Bot */}
           <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1 md:auto-rows-fr">
           <motion.div variants={childVariants}  className="bg-[white] p-8  rounded-[20px] ">
-            <h1 className="font-bold text-xl pb-4">PHOENIX BOT</h1>
+            <h1 className="font-bold text-xl pb-4">PHOENIX AGENT</h1>
             <p className="text-sm pb-8">
-              Phoenix Bot stands as a robust and essential tool for anyone
+              Phoenix Agent stands as a robust and essential tool for anyone
               involved in the blockchain space. By leveraging advanced AI
               technologies, it ensures that the blockchain ecosystem remains
               secure, transparent, and reliable. Whether you are an investor,
@@ -108,9 +108,14 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
+            <div className="flex flex-row gap-2">
             <Link href="https://www.waitlist.phoenixtoken.community" className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
               Join waitlist
             </Link>
+            <Link href="https://tracker.phoenixtoken.community/agent-chat" target="_blank" className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
+             Check out
+            </Link>
+            </div>
           </motion.div>
 
           {/*Phoenix Bot */}
@@ -147,7 +152,7 @@ export default function Utilities() {
               for all.
             </p>
             <button className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
-              <a href="https://resurgence-foundation.vercel.app/">Learn more</a>
+              <a href="https://www.resurgencefoundation.org" target="_blank">Learn more</a>
             </button>
           </motion.div>
         </div>

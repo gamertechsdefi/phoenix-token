@@ -10,6 +10,8 @@ const smcdao = "/images/smcdao_partner.png";
 const wkc = "/images/wkc_partner.png";
 const btcdragon = "/images/btcdragon_partner.png";
 const yukan = "/images/yukan_partner.png";
+const ocicat = "/images/ocicat_partnership.png";
+const nene = "/images/nene_partner.png";
 
 export default function Partners() {
 
@@ -76,13 +78,15 @@ export default function Partners() {
               opportunities to our community.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 justify-center ">
+          <div className="grid md:grid-cols-3 gap-8 justify-center">
               <Image src={smcdao} alt="smcdao" width={200} height={200} />
               <Image src={wkc} alt="wikicat coin" width={200} height={200} />
               <Image src={dtg} alt="defi tiger token" width={200} height={200} />
               <Image src={war} alt="water rabbit token" width={200} height={200} />
               <Image src={btcdragon} alt="btcdragon" width={200} height={200} />
               <Image src={yukan} alt="yukan token" width={200} height={200} />
+              <Image src={ocicat} alt="ocicat coin" width={200} height={200} />
+              <Image src={nene} alt=" nene token" width={200} height={200} />
           </div>
         </div>
       </section>
