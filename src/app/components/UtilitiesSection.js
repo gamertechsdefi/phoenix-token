@@ -108,7 +108,7 @@ export default function Utilities() {
               navigating the complexities of the blockchain world with
               confidence.
             </p>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-col gap-2">
             <Link href="https://www.waitlist.phoenixtoken.community" className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
               Join waitlist
             </Link>
