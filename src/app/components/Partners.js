@@ -12,6 +12,7 @@ const btcdragon = "/images/btcdragon_partner.png";
 const yukan = "/images/yukan_partner.png";
 const ocicat = "/images/ocicat_partnership.png";
 const nene = "/images/nene_partner.png";
+const tiwi = "/images/tiwi_partner.png";
 
 export default function Partners() {
 
@@ -87,6 +88,7 @@ export default function Partners() {
               <Image src={yukan} alt="yukan token" width={200} height={200} />
               <Image src={ocicat} alt="ocicat coin" width={200} height={200} />
               <Image src={nene} alt=" nene token" width={200} height={200} />
+              <Image src={tiwi} alt="tiwi ecosystem" width={200} height={200} />
           </div>
         </div>
       </section>
