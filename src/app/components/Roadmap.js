@@ -77,6 +77,7 @@ const HorizontalScrollCarousel = () => {
 };
 
 
+
 export default Example;
 
 const roadmapData = [
@@ -132,7 +133,7 @@ const Card = ({ quarter, items }) => {
       {items.map((item, index) => (
         <div key={index} className="flex flex-col pb-2">
           <span className="font-semibold">{item.title}</span>
-          <span>{item.description}</span>
+          {/* <span>{item.description}</span> */}
         </div>
       ))}
     </div>
