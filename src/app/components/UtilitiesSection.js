@@ -118,6 +118,27 @@ export default function Utilities() {
             </div>
           </motion.div>
 
+           {/*Token Tracker */}
+           <motion.div variants={childVariants} className="bg-gray-200 p-8 rounded-[20px]">
+            <div className="flex flex-row gap-4 justify-center pb-2">
+              <div className="relative w-[80px] h-[60px] bg-white border-2 border-neutral-900 rounded-lg">
+                <Image className="absolute" src={rflogo} layout="fill" objectFit="cover" alt="resurgence foundation logo" />
+              </div>
+              <h1 className="font-bold text-xl pb-4">TOKEN TRACKER</h1>
+              </div>
+            <p className="pb-4 text-sm">
+            Our tracker platform designed to monitor and analyze tokens (partners & tokens coming out of Africa) as a 
+            culture to building and advancing the tokens from our demograph. 
+            It provides real-time data on token price, supply, holders, and transactions. Built for the SMC DAO Community, 
+            partnered projects and support to the African builders, it fosters transparency and engagement with this 
+            the Africa developments ecosystem. 
+            <span className="font-semibold"> Currently available for BNBChain and Solana</span>
+            </p>
+            <button className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
+              <a href="https://www.tracker.phoenixtoken.community" target="_blank">Try now</a>
+            </button>
+          </motion.div>
+
           {/*Phoenix Bot */}
           <motion.div variants={childVariants} className="bg-gray-100 p-8  rounded-[20px]">
             <h1 className="font-bold text-xl pb-4">PHOENIX SWAP</h1>
@@ -155,6 +176,8 @@ export default function Utilities() {
               <a href="https://www.resurgencefoundation.org" target="_blank">Learn more</a>
             </button>
           </motion.div>
+
+          
         </div>
         </div>
       </motion.section>
