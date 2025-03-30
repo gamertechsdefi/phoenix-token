@@ -135,7 +135,7 @@ export default function Utilities() {
             <span className="font-semibold"> Currently available for BNBChain and Solana</span>
             </p>
             <button className="font-bold bg-orange-600 text-white p-4 rounded-[12.5px]">
-              <a href="https://www.tracker.phoenixtoken.community" target="_blank">Try now</a>
+              <a href="https://tracker.phoenixtoken.community" target="_blank">Try now</a>
             </button>
           </motion.div>
 
