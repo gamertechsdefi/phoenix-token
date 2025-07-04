@@ -28,7 +28,7 @@ export default function Home() {
       <Partners />
       <BuyToken />
       <Utilities />
-      <Tokenomics />
+      {/* <Tokenomics /> */}
       <Roadmap />
       <BrandAsset />
       <AuditPage />
