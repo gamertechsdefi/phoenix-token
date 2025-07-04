@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 
 const rflogo = "/images/rflogo.png";
+const firescreener = "/images/firescreener.jpg";
 
 const sectionVariants = {
   hidden: {
@@ -120,11 +121,11 @@ export default function Utilities() {
 
             {/*Token Tracker */}
             <motion.div variants={childVariants} className="bg-neutral-900 text-white p-8 rounded-[20px]">
-              <div className="flex flex-row gap-4 pb-2">
-                <div className="relative w-[80px] h-[60px] bg-white border-2 border-neutral-900 rounded-lg">
-                  <Image className="absolute" src={rflogo} layout="fill" objectFit="cover" alt="resurgence foundation logo" />
+              <div className="flex flex-row items-center gap-4 pb-2">
+                <div className="relative w-[60px] h-[60px] bg-white border-2 border-neutral-900 rounded-2xl">
+                  <Image className="absolute" src={firescreener} layout="fill" objectFit="cover" alt="firescreener logo" />
                 </div>
-                <h1 className="font-bold text-xl pb-4">FIRESCREENER</h1>
+                <h1 className="font-bold text-xl">FIRESCREENER</h1>
               </div>
               <p className="pb-4 text-sm">
                 Born from a meme, fueled by purpose, our MultiChain Token Tracker 
@@ -165,7 +166,7 @@ export default function Utilities() {
                 <div className="relative w-[80px] h-[60px] bg-white border-2 border-neutral-900 rounded-lg">
                   <Image className="absolute" src={rflogo} layout="fill" objectFit="cover" alt="resurgence foundation logo" />
                 </div>
-                <h1 className="font-bold text-xl pb-4">RESURGENCE FOUNDATION</h1>
+                <h1 className="font-bold text-xl">RESURGENCE FOUNDATION</h1>
               </div>
               <p className="pb-4 text-sm">
                 Our mission is to empower individuals by
